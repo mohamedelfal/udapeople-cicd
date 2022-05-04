@@ -8,4 +8,3 @@
 - [CloudFormation](https://aws.amazon.com/cloudformation/) - Infrastrcuture as code
 - [Ansible](https://www.ansible.com/) - Configuration management tool
 - [Prometheus](https://prometheus.io/) - Monitoring tool
-- mohamed
