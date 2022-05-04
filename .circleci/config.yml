@@ -93,7 +93,7 @@ jobs:
             command: |
               cd backend
               npm install
-              npm test#        
+              npm test        
 #an-frontend:
 #docker:
 #  # Docker image here
