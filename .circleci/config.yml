@@ -1,14 +1,14 @@
 version: 2.1
 
-#orbs:
-#  slack: circleci/slack@4.9.3
-#commands:
-#  notify_on_failure:
-#    steps:
-#      - slack/notify:
-#          event: fail
-#          channel: project3
-#          templete: basic_fail_1
+orbs:
+  slack: circleci/slack@4.1
+commands:
+  notify_on_failure:
+    steps:
+      - slack/notify:
+          event: fail
+          channel: project3
+          template: basic_fail_1
 
 #commands:
 #  destroy-environment:
@@ -59,8 +59,8 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-#      - notify_on_failure
-      
+      - notify_on_failure
+
   build-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -77,8 +77,8 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-#      - notify_on_failure
-      
+      - notify_on_failure
+
   test-frontend:
     docker:
       - image: cimg/node:13.8.0
@@ -92,8 +92,8 @@ jobs:
             cd frontend
             npm install
             npm test    
-#      - notify_on_failure 
-      
+      - notify_on_failure
+
   test-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -107,8 +107,8 @@ jobs:
             cd backend
             npm install
             npm test
-  #    - notify_on_failure  
-      
+      - notify_on_failure
+
   scan-frontend:
     docker:
       - image: cimg/node:13.8.0
@@ -123,8 +123,8 @@ jobs:
             npm install
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
- #     - notify_on_failure
-      
+      - notify_on_failure
+
   scan-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -140,7 +140,7 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
- #     - notify_on_failure          
+      - notify_on_failure
 
 #ploy-infrastructure:
 #docker:
@@ -312,10 +312,10 @@ jobs:
       - image: cimg/base:stable
     steps:
       - slack/notify:
-          event: paas
-          channel: channel:project3
-          templete: success_tagged_deployment_1
-    
+          event: pass
+          channel: project3
+          templete: success_tagged_deploy_1
+
 workflows:
   default:
     jobs:
@@ -329,13 +329,12 @@ workflows:
           requires: [build-backend]
       - scan-frontend:
           requires: [build-frontend]
-#      - notify_on_success:
-#          requires:
-#            - test-frontend
-#            - test-backend
-#            - scan-backend
-#            - scan-frontend
-#            
+      - notify_on_success:
+          requires:
+            - test-frontend
+            - test-backend
+            - scan-backend
+            - scan-frontend     
 #      - deploy-infrastructure:
 #          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
 #          filters:
