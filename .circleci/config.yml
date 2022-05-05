@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   slack: circleci/slack@4.9.3
 command: |
-  notify_on_failure
+  notify_on_failure:
     steps:
      - slack/notify:
          event: fail
