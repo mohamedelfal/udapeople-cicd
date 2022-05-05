@@ -31,13 +31,13 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 - [`Prometheus`](https://prometheus.io/) - Monitoring tool
 
 ## Files Included
-* [`.circleci`](./udapeople-cicd/.circleci)
-* [`backend`](./udapeople-cicd/backend)
-* [`frontend`](./udapeople-cicd/frontend)
-* [`util`](./udapeople-cicd/util)
-* [`README.md`](./udapeople-cicd/README.md)
-* [`.gitignore`](./udapeople-cicd/.gitignore)
-* [`LICENSE.md`](./udapeople-cicd/LICENSE.md)
+* [`.circleci`](./.circleci)
+* [`backend`](./backend)
+* [`frontend`](./frontend)
+* [`util`](./util)
+* [`README.md`](./README.md)
+* [`.gitignore`](./.gitignore)
+* [`LICENSE.md`](./LICENSE.md)
 
 ## License
 * [**License**](./udapeople-cicd/LICENSE.md)
