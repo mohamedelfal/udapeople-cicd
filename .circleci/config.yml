@@ -314,7 +314,7 @@ jobs:
       - slack/notify:
           event: pass
           channel: project3
-          templete: success_tagged_deploy_1
+          template: success_tagged_deploy_1
 
 workflows:
   default:
@@ -329,6 +329,7 @@ workflows:
           requires: [build-backend]
       - scan-frontend:
           requires: [build-frontend]
+
       - notify_on_success:
           requires:
             - test-frontend
