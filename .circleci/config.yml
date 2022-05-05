@@ -5,10 +5,10 @@ orbs:
 commands: |
   notify_on_failure:
     steps:
-     - slack/notify:
-         event: fail
-         channel: project3
-         templete: basic_fail_1
+      - slack/notify:
+          event: fail
+          channel: project3
+          templete: basic_fail_1
 
 #commands:
 #  destroy-environment:
