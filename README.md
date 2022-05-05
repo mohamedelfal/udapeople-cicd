@@ -40,4 +40,4 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 * [`LICENSE.md`](./LICENSE.md)
 
 ## License
-* [**License**](./udapeople-cicd/LICENSE.md)
+* [**License**](./LICENSE.md)
