@@ -32,7 +32,24 @@ version: 2.1
 #              exit 1
 #            fi
 #
-jobs:            
+jobs:
+  build-frontend:
+    docker:
+      - image: cimg/node:13.8.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys: [frontend-deps]
+      - run:
+          name: Build front-end
+          command: |
+            cd frontend
+            npm install
+            npm run build
+      - save_cache:
+          paths: [frontend/node_modules]
+          key: frontend-deps
+
   build-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -102,6 +119,7 @@ jobs:
             cd backend
             npm install
             npm audit --audit-level=critical
+
 
 
 #ploy-infrastructure:
