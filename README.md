@@ -1,7 +1,9 @@
-Project№3
+
 # Udacity Advanced Cloud DevOps 
+
 ### Give your Application Auto-Deploy Superpowers
-*Cloud DevOps Project 3*
+Project *№3*: **Udapeople**   
+*Cloud DevOps Project*
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
