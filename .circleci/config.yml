@@ -7,7 +7,7 @@ commands:
     steps:
       - slack/notify:
           event: fail
-          channel: project3
+          channel: udapeople
           template: basic_fail_1
 
 #commands:
@@ -313,7 +313,7 @@ jobs:
     steps:
       - slack/notify:
           event: pass
-          channel: project3
+          channel: udapeople
           template: success_tagged_deploy_1
 
 workflows:
