@@ -13,7 +13,7 @@ Project *№3*: **Udapeople**
 
 
 # Udapeople 
-A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and CloudFront and monitored with Prometheus, with [Slack Or E-mail] notifications used for alerts.
+A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and CloudFront and monitored with Prometheus, with Slack and E-mail notifications used for alerts.
 
 ## Prerequisites
 * [`Nodejs 13`](https://nodejs.org/en/)
