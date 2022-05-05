@@ -307,14 +307,14 @@ jobs:
 #          # your code here
 #        fi
 #        
-  notify_on_success
+  notify_on_success:
     docker:
       - image: cimg/base:stable
     steps:
       - slack/notify:
-      event:paass
-      channel: channel:project3
-       templete: success_tagged_deployment_1
+          event: paas
+          channel: channel:project3
+          templete: success_tagged_deployment_1
     
 workflows:
   default:
