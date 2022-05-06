@@ -63,10 +63,9 @@ jobs:
           key: frontend-deps
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
-
 
   build-backend:
     docker:
@@ -87,8 +86,8 @@ jobs:
 
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
 
   test-frontend:
@@ -107,8 +106,8 @@ jobs:
 
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
   
   test-backend:
@@ -127,8 +126,8 @@ jobs:
 
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
 
   scan-frontend:
@@ -148,8 +147,8 @@ jobs:
 
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
 
 
@@ -171,8 +170,8 @@ jobs:
 
 #      - notify_on_failure
       - slack/notify:
-          event: fail
           channel: udapeople
+          event: fail
           template: basic_fail_1
 
 #deploy-infrastructure:
@@ -346,8 +345,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - slack/notify:
-          event: pass
           channel: udapeople
+          event: pass
           template: success_tagged_deploy_1
       - slack/notify:
           channel: udapeople
