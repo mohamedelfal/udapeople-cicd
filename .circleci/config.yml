@@ -1,15 +1,16 @@
 version: 2.1
 
 orbs: 
-  slack: circleci/slack@4.1
-commands:
-  notify_on_failure:
-    steps:
-      - slack/notify:
-          event: fail
-          channel: udapeople
-          template: basic_fail_1
-
+#  slack: circleci/slack@4.1 
+  slack: circleci/slack@4.9.4
+#commands:
+#  notify_on_failure:
+#    steps:
+#      - slack/notify:
+#          event: fail
+#          channel: udapeople
+#          template: basic_fail_1
+#
 
 #commands:
 #  destroy-environment:
@@ -60,7 +61,11 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-      - notify_on_failure
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
 
   build-backend:
@@ -79,7 +84,12 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-      - notify_on_failure
+
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
   test-frontend:
     docker:
@@ -93,8 +103,13 @@ jobs:
           command: |
             cd frontend
             npm install
-            npm test    
-      - notify_on_failure
+            npm test
+
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
   
   test-backend:
     docker:
@@ -109,8 +124,13 @@ jobs:
             cd backend
             npm install
             npm test
-      - notify_on_failure
-  
+
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
+
   scan-frontend:
     docker:
       - image: cimg/node:13.8.0
@@ -125,7 +145,12 @@ jobs:
             npm install
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-      - notify_on_failure
+
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
 
   scan-backend:
@@ -143,7 +168,12 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-      - notify_on_failure
+
+#      - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
 #deploy-infrastructure:
 #    docker:
@@ -319,6 +349,10 @@ jobs:
           event: pass
           channel: udapeople
           template: success_tagged_deploy_1
+      - slack/notify:
+          channel: general
+          event: fail
+          template: basic_fail_1
 
 workflows:
   default:
