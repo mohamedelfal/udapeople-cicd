@@ -12,7 +12,7 @@ version: 2.1
 
 orbs:
   slack: circleci/slack@4.1
-  node: circleci/node:13.8.0
+#  node: circleci/node:13.8.0
 #jobs:
 #  deploy:
 #    executor:
@@ -150,19 +150,7 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_fail_with_template
-  deploy:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/install-packages
-      - run:
-          command: npm run deploy
-      # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
-          channel: udapeople
+
 
   scan-backend:
     docker:
@@ -180,7 +168,19 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_fail_with_template
-
+  deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run deploy
+      # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+          channel: udapeople
 #deploy-infrastructure:
 #    docker:
 #      # Docker image here that supports AWS CLI
