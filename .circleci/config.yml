@@ -345,10 +345,10 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - slack/notify:
-          channel: udapeople
-          event: pass
-          template: success_tagged_deploy_1
+#      - slack/notify:
+#          channel: udapeople
+#          event: pass
+#          template: success_tagged_deploy_1
       - slack/notify:
           channel: udapeople
           event: fail
