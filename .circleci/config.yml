@@ -61,6 +61,10 @@ jobs:
           paths: [frontend/node_modules]
           key: frontend-deps
       - notify_on_failure
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
   build-backend:
     docker:
