@@ -10,29 +10,29 @@ version: 2.1
 #          channel: udapeople
 #          template: basic_fail_1
 
-  orbs:
-    slack: circleci/slack@4.1
-    node: circleci/node:4.1
-  jobs:
-    deploy:
-      executor:
-        name: node/default
-      steps:
-        - checkout
-        - node/install-packages
-        - run:
-            command: npm run deploy
-        # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
-        - slack/notify:
-            event: fail
-            template: basic_fail_1
-            channel: udapeople
-  workflows:
-    deploy_and_notify:
-      jobs:
-        - deploy:
-            # Secure your Slack OAuth access token behind a restricted context
-            context: slack-secrets
+orbs:
+  slack: circleci/slack@4.1
+  node: circleci/node:4.1
+jobs:
+  deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run deploy
+      # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+          channel: udapeople
+workflows:
+  deploy_and_notify:
+    jobs:
+      - deploy:
+          # Secure your Slack OAuth access token behind a restricted context
+          context: slack-secrets
 
 #commands:
 #  destroy-environment:
