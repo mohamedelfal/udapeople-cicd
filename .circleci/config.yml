@@ -1,39 +1,14 @@
 version: 2.1
 
-#orbs:
-#  slack: circleci/slack@4.1
-#commands:
-#  notify_on_fail_with_template:
-#    steps:
-#      - slack/notify:
-#          event: fail
-#          channel: udapeople
-#          template: basic_fail_1
-
 orbs:
   slack: circleci/slack@4.1
-#  node: circleci/node:13.8.0
-#jobs:
-#  deploy:
-#    executor:
-#      name: node/default
-#    steps:
-#      - checkout
-#      - node/install-packages
-#      - run:
-#          command: npm run deploy
-#      # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
-#      - slack/notify:
-#          event: fail
-#          template: basic_fail_1
-#          channel: udapeople
-#workflows:
-#  deploy_and_notify:
-#    jobs:
-#      - deploy:
-#          # Secure your Slack OAuth access token behind a restricted context
-#          context: slack-secrets
-#
+commands:
+  notify_on_fail_with_template:
+    steps:
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
 
 #commands:
@@ -85,7 +60,7 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-#      - notify_on_fail_with_template
+      - notify_on_fail_with_template
 
   build-backend:
     docker:
@@ -103,7 +78,7 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-#      - notify_on_fail_with_template
+      - notify_on_fail_with_template
 
   test-frontend:
     docker:
@@ -118,7 +93,7 @@ jobs:
             cd frontend
             npm install
             npm test    
-#      - notify_on_fail_with_template
+      - notify_on_fail_with_template
 
   test-backend:
     docker:
@@ -133,7 +108,7 @@ jobs:
             cd backend
             npm install
             npm test
-#      - notify_on_fail_with_template
+      - notify_on_fail_with_template
 
   scan-frontend:
     docker:
@@ -149,7 +124,7 @@ jobs:
             npm install
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-#      - notify_on_fail_with_template
+      - notify_on_fail_with_template
 
 
   scan-backend:
@@ -167,20 +142,8 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-#      - notify_on_fail_with_template
-  deploy:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/install-packages
-      - run:
-          command: npm run deploy
-      # If any of the above steps in this job (such as the deployment) have failed, this Slack notification will send.
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
-          channel: udapeople
+      - notify_on_fail_with_template
+
 #deploy-infrastructure:
 #    docker:
 #      # Docker image here that supports AWS CLI
@@ -376,11 +339,6 @@ workflows:
             - test-backend
             - scan-backend
             - scan-frontend
-  deploy_and_notify:
-    jobs:
-      - deploy:
-          # Secure your Slack OAuth access token behind a restricted context
-          context: slack-secrets
 
 
 #      - deploy-infrastructure:
