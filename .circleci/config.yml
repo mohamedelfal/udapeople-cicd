@@ -165,8 +165,8 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix --force --audit-level=critical
-            npm audit fix --force --audit-level=critical
+#            npm audit fix --force --audit-level=critical
+#            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 
 #      - notify_on_failure
@@ -350,7 +350,7 @@ jobs:
           channel: udapeople
           template: success_tagged_deploy_1
       - slack/notify:
-          channel: general
+          channel: udapeople
           event: fail
           template: basic_fail_1
 
