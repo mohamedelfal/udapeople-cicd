@@ -12,7 +12,7 @@ version: 2.1
 
 orbs:
   slack: circleci/slack@4.1
-  node: circleci/node:4.1
+  node: circleci/node:13.8.0
 jobs:
   deploy:
     executor:
