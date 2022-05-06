@@ -3,14 +3,13 @@ version: 2.1
 orbs: 
   slack: circleci/slack@4.1 
 
-#commands:
-#  notify_on_failure:
-#    steps:
-#      - slack/notify:
-#          event: fail
-#          channel: udapeople
-#          template: basic_fail_1
-#
+commands:
+  notify_on_failure:
+    steps:
+      - slack/notify:
+          event: fail
+          channel: udapeople
+          template: basic_fail_1
 
 #commands:
 #  destroy-environment:
@@ -61,12 +60,7 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
-
+      - notify_on_failure
   build-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -83,12 +77,7 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
 
   test-frontend:
     docker:
@@ -103,12 +92,7 @@ jobs:
             cd frontend
             npm install
             npm test
-
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
   
   test-backend:
     docker:
@@ -123,12 +107,7 @@ jobs:
             cd backend
             npm install
             npm test
-
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
 
   scan-frontend:
     docker:
@@ -144,12 +123,7 @@ jobs:
             npm install
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
 
 
   scan-backend:
@@ -167,12 +141,7 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-
-#      - notify_on_failure
-      - slack/notify:
-          channel: udapeople
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
 
 #deploy-infrastructure:
 #    docker:
