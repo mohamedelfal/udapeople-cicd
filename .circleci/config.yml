@@ -27,12 +27,14 @@ jobs:
           event: fail
           template: basic_fail_1
           channel: udapeople
-workflows:
-  deploy_and_notify:
-    jobs:
-      - deploy:
-          # Secure your Slack OAuth access token behind a restricted context
-          context: slack-secrets
+#workflows:
+#  deploy_and_notify:
+#    jobs:
+#      - deploy:
+#          # Secure your Slack OAuth access token behind a restricted context
+#          context: slack-secrets
+#
+
 
 #commands:
 #  destroy-environment:
@@ -361,6 +363,12 @@ workflows:
             - test-backend
             - scan-backend
             - scan-frontend
+  deploy_and_notify:
+    jobs:
+      - deploy:
+          # Secure your Slack OAuth access token behind a restricted context
+          context: slack-secrets
+
 
 #      - deploy-infrastructure:
 #          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
