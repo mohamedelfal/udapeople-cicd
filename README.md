@@ -49,27 +49,44 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 
 # Section 2: 
 ## Deploying Working, Trustworthy Software
+## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 
-* A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * [`url`](https://github.com/mohamedelfal/udapeople-cicd): https://github.com/mohamedelfal/udapeople-cicd
-
+* A public git repository with your project code. [`URL01`]
 * Evidence of code-based CI/CD configuration in the form of `yaml` files in your git repository.
-  * [`yaml` file](./.circleci/config.yml)
-Console output of various pre-deploy job failure scenarios:
 
-Build Jobs that failed because of compile errors. [SCREENSHOT01](./screenshots/SCREENSHOT01.png)  
-Failed unit tests. [SCREENSHOT02](./screenshots/SCREENSHOT02.png)  
-Failure because of vulnerable packages. [SCREENSHOT03](./screenshots/SCREENSHOT03.png)  
-An alert from one of your failed builds. [SCREENSHOT04](./screenshots/)  
-Evidence in your code that:  
-Compile errors have been fixed.  
-Unit tests have been fixed.  
-All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
+Console output of various pre-deploy job failure scenarios:
+* Build Jobs that failed because of compile errors. [SCREENSHOT01]
+* Failed unit tests. [SCREENSHOT02]
+* Failure because of vulnerable packages. [SCREENSHOT03]
+* An alert from one of your failed builds. [SCREENSHOT04]
+* Evidence in your code that:  
+  * Compile errors have been fixed.  
+  * Unit tests have been fixed.  
+  * All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
+
+## Utilize a configuration management tool to accomplish deployment to cloud-based servers.
+* Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]
+
+* Console output of a smoke test job that is failing appropriately. [SCREENSHOT06]
+
+* Console output of a successful rollback after a failed smoke test. [SCREENSHOT07]
+
+* Console output of successful promotion of new version to production in CloudFront. [SCREENSHOT08]
+
+* Console output of successful cleanup job that removes old S3 bucket and EC2 instance. [SCREENSHOT09]
+
+* Evidence that deploy jobs only happen on master branch. [SCREENSHOT10]
+
+* Evidence of deployed and functioning front-end application in an S3 bucket [URL02] and in CloudFront. [URL03]
+
+* Evidence of healthy back-end application. [URL04]
+
 
 ## Section 2: Files
+## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 * A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * [`url.txt`](./url.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
+  * [`URL01.txt`](./URL01.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
 * [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
   * [`config.yml`](./.circleci/config.yml) <br> <br>
 * [Screenshots folder](./screenshots/) - This folder contains all required screenshots:
@@ -82,6 +99,40 @@ All critical security vulnerabilities caught by the “Analyze” job have been 
      * Unit tests have been fixed.  
      * All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
 
+## Utilize a configuration management tool to accomplish deployment to cloud-based servers.
+* Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]
+  * [SCREENSHOT05](./screenshots/)
+* Console output of a smoke test job that is failing appropriately. [SCREENSHOT06]
+  * [SCREENSHOT06](./screenshots/)
+* Console output of a successful rollback after a failed smoke test. [SCREENSHOT07]
+  * [SCREENSHOT07](./screenshots/)
+* Console output of successful promotion of new version to production in CloudFront. [SCREENSHOT08]
+  * [SCREENSHOT08](./screenshots/)
+* Console output of successful cleanup job that removes old S3 bucket and EC2 instance. [SCREENSHOT09]
+  * [SCREENSHOT09](./screenshots/)
+* Evidence that deploy jobs only happen on master branch. [SCREENSHOT10]
+  * [SCREENSHOT10](./screenshots/)
+* Evidence of deployed and functioning front-end application in an S3 bucket [URL02] and in CloudFront. [URL03]
+  * [URL03](./URL03.txt)
+* Evidence of healthy back-end application. [URL04]
+  * [URL04](./URL04.txt)
+
+# Section 3: 
+## Turn Errors into Sirens
+## Surface critical server errors for diagnosis using centralized logging.
+* Evidence of Prometheus Server. [URL05]
+* Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]
+* Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. [SCREENSHOT12]
+
+
+# Section 3: files
+## Surface critical server errors for diagnosis using centralized logging.
+* Evidence of Prometheus Server. [URL05]
+  * [URL05](./URL05.txt)
+* Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]
+  * [SCREENSHOT11](./screenshots/)
+* Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. [SCREENSHOT12]
+  * [SCREENSHOT12](./screenshots/)
 
 ## Files Included
 * [`.circleci` folder](./.circleci)
