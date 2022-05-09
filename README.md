@@ -91,11 +91,17 @@ Console output of various pre-deploy job failure scenarios:
   * [`URL01.txt`](./URL01.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
 * [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
   * [`config.yml`](./.circleci/config.yml) <br> <br>
+  
 * [`Screenshots folder](./screenshots/) - This folder contains all required screenshots:
   * Build Jobs that failed because of compile errors.
+    * [SCREENSHOT01](./screenshots/SCREENSHOT01.png)
   * Failed unit tests.  
-  * Failure because of vulnerable packages.
+    * [SCREENSHOT02](./screenshots/SCREENSHOT02.png)
+  * Failure because of vulnerable packages. 
+    * [SCREENSHOT03](./screenshots/SCREENSHOT03.png)
   * An alert from one of your failed builds. 
+    * [SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail
+    * [SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack
   * Evidence in your code that:  
      * Compile errors have been fixed.  
      * Unit tests have been fixed.  
