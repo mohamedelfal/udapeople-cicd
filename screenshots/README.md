@@ -61,7 +61,7 @@
 ![notifyPass.jpg](./notifyPass.jpg)
 
 ## SCREENSHOT04 e-mail-Notification
-![e-Mail-Notification.jpg](./e-Mail-Notification.jpg)
+![e-mail-Notification](./SCREENSHOT04.png)
 
 ## SCREENSHOT04 slack-Notification
-![slack-notify.jpg](./slack-notify.jpg)
+![slack-Notification](./SCREENSHOT04.jpg)
