@@ -51,14 +51,14 @@
 * notify.jpg
 ![notify.jpg](./notify.jpg)
 
+* notifyPass.jpg
+![notifyPass.jpg](./notifyPass.jpg)
+
 * notify1.jpg
 ![notify1.jpg](./notify1.jpg)
 
 * notify2.jpg
 ![notify2.jpg](./notify2.jpg)
-
-* notifyPass.jpg
-![notifyPass.jpg](./notifyPass.jpg)
 
 ## SCREENSHOT04 e-mail-Notification
 ![e-mail-Notification](./SCREENSHOT04.png)
