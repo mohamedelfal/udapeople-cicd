@@ -113,6 +113,7 @@ Console output of various pre-deploy job failure scenarios:
 * Evidence that deploy jobs only happen on master branch. [SCREENSHOT10]
   * [SCREENSHOT10](./screenshots/)
 * Evidence of deployed and functioning front-end application in an S3 bucket [URL02] and in CloudFront. [URL03]
+  * [URL02](./URL02.txt)
   * [URL03](./URL03.txt)
 * Evidence of healthy back-end application. [URL04]
   * [URL04](./URL04.txt)
@@ -141,7 +142,7 @@ Console output of various pre-deploy job failure scenarios:
 * [`util` folder](./util)
 * [`.gitignore` folder](./.gitignore)
 * [`Screenshots` folder](./screenshots/)
-* [`"presentation.pdf"` file](./presentation.pdf)
+* ["`presentation.pdf`" file](./presentation.pdf)
 * [`url.txt` file](./url.txt)
 * [`README.md` file](./README.md)
 * [`LICENSE.md` file](./LICENSE.md)
