@@ -121,7 +121,7 @@ jobs:
           command: |
             cd frontend
             npm install
-            npm audit fix --force --audit-level=critical
+#            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_failure
 
@@ -138,8 +138,8 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix --force --audit-level=critical
-            npm audit fix --force --audit-level=critical
+#            npm audit fix --force --audit-level=critical
+#            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_failure
   notify:
@@ -155,14 +155,14 @@ jobs:
                     "fields": [
                       {
                         "type": "plain_text",
-                        "text": "*This is a text notification*",
+                        "text": "*Mohamed it's fail*",
                         "emoji": true
                       }
                     ]
                   }
                 ]
               }
-            event: always
+            event: fail
 
 #deploy-infrastructure:
 #    docker:
