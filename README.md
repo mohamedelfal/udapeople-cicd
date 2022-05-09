@@ -95,13 +95,21 @@ Console output of various pre-deploy job failure scenarios:
 * [`Screenshots folder](./screenshots/) - This folder contains all required screenshots:
   * Build Jobs that failed because of compile errors.
     * [SCREENSHOT01](./screenshots/SCREENSHOT01.png)
+      ![SCREENSHOT01](./screenshots/SCREENSHOT01.png)
   * Failed unit tests.  
     * [SCREENSHOT02](./screenshots/SCREENSHOT02.png)
+      ![SCREENSHOT02](./screenshots/SCREENSHOT02.png)
   * Failure because of vulnerable packages. 
     * [SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)
+      ![SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)
+    * [SCREENSHOT03-1](./screenshots/SCREENSHOT03-1.jpg)
+      ![SCREENSHOT03-1](./screenshots/SCREENSHOT03-1.jpg)
+
   * An alert from one of your failed builds. 
     * [SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail
+      ![SCREENSHOT04](./screenshots/SCREENSHOT04.png)
     * [SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack
+      ![SCREENSHOT04](./screenshots/SCREENSHOT04.jpg)
   * Evidence in your code that:  
      * Compile errors have been fixed.  
      * Unit tests have been fixed.  
