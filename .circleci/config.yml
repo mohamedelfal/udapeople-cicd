@@ -330,15 +330,15 @@ workflows:
       - build-backend
       - test-frontend:
           requires: [build-frontend]
-          context: slackapp
       - test-backend:
           requires: [build-backend]
-          context: slackapp
       - scan-backend:
           requires: [build-backend]
-          context: slackapp
       - scan-frontend:
           requires: [build-frontend]
+  send-notification:
+    jobs:
+      - notify:
           context: slackapp
 #      - notify_on_failure
 #      - notify_on_success:
