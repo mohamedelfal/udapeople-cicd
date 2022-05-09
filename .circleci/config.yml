@@ -60,13 +60,7 @@ jobs:
           paths: [frontend/node_modules]
           key: frontend-deps
 #      - notify_on_failure
-      - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+
           
   build-backend:
     docker:
@@ -85,13 +79,7 @@ jobs:
           paths: [backend/node_modules]
           key: backend-deps
 #      - notify_on_failure
-      - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+
 
 
   test-frontend:
@@ -108,13 +96,7 @@ jobs:
             npm install
             npm test
 #      - notify_on_failure
-      - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+
 
 
   test-backend:
@@ -131,13 +113,7 @@ jobs:
             npm install
             npm test
 #      - notify_on_failure
-      - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+
           
   scan-frontend:
     docker:
@@ -171,13 +147,24 @@ jobs:
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_failure
+
       - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*This is a text notification*",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
 
 
 #deploy-infrastructure:
@@ -360,22 +347,20 @@ workflows:
   default:
     jobs:
       - build-frontend
-      - slack/on-hold:
-          context: slackapp
-      
       - build-backend
       - test-frontend:
           requires: [build-frontend]
-            - slack/on-hold
       - test-backend:
           requires: [build-backend]
-             - slack/on-hold
       - scan-backend:
           requires: [build-backend]
-             - slack/on-hold
       - scan-frontend:
           requires: [build-frontend]
-             - slack/on-hold
+  send-notification:
+    jobs:
+      - notify:
+          context: slackapp
+
 #  send-notification:
 #    jobs:
 #      - notify:
