@@ -3,13 +3,15 @@ version: 2.1
 orbs: 
   slack: circleci/slack@4.1 
 
-# commands:
-#   notify_on_failure:
-#     steps:
-#       - slack/notify:
-#           event: fail
-#           channel: udapeople
-#           template: basic_fail_1
+ commands:
+   notify_on_failure:
+     docker:
+       - image: cimg/base:stable
+     steps:
+       - slack/notify:
+           event: fail
+           channel: udapeople
+           template: basic_fail_1
 
 #commands:
 #  destroy-environment:
@@ -60,18 +62,7 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
 
   build-backend:
     docker:
@@ -89,18 +80,8 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
+
 
 
   test-frontend:
@@ -116,18 +97,8 @@ jobs:
             cd frontend
             npm install
             npm test
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
+
 
 
   test-backend:
@@ -143,18 +114,7 @@ jobs:
             cd backend
             npm install
             npm test
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
 
   scan-frontend:
     docker:
@@ -170,18 +130,7 @@ jobs:
             npm install
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
 
   scan-backend:
     docker:
@@ -198,18 +147,8 @@ jobs:
 #            npm audit fix --force --audit-level=critical
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-#      - notify_on_failure
-  notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            mentions: '@Mohamed Antar Abdelhadi'
-            template: basic_fail_1
-        - slack/notify:
-            event: pass
-            template: success_tagged_deploy_1
+      - notify_on_failure
+
 
 #deploy-infrastructure:
 #    docker:
@@ -377,15 +316,15 @@ jobs:
 #            fi
 #        
   
-#  notify_on_success:
-#    docker:
-#      - image: cimg/base:stable
-#    steps:
-#      - slack/notify:
-#          channel: udapeople
-#          event: pass
-#          template: success_tagged_deploy_1
-#
+  notify_on_success:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - slack/notify:
+          channel: udapeople
+          event: pass
+          template: success_tagged_deploy_1
+
 
 workflows:
   default:
@@ -401,16 +340,12 @@ workflows:
       - scan-frontend:
           requires: [build-frontend]
 
-#      - notify_on_success:
-#          requires:
-#            - test-frontend
-#            - test-backend
-#            - scan-backend
-#            - scan-frontend
-  send-notification:
-    jobs:
-      - notify:
-          context: slackapp
+      - notify_on_success:
+          requires:
+            - test-frontend
+            - test-backend
+            - scan-backend
+            - scan-frontend
 
 #      - deploy-infrastructure:
 #          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
