@@ -359,10 +359,10 @@ workflows:
           requires: [build-backend]
       - scan-frontend:
           requires: [build-frontend]
-  send-notification:
-    jobs:
-      - notify:
-          context: slackapp
+    send-notification:
+      jobs:
+        - notify:
+            context: slackapp
 
 #  send-notification:
 #    jobs:
