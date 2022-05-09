@@ -46,7 +46,7 @@
  
 
 * scan passed.jpg
-![scan passed.jpg](./scan-passed.jpg)
+![scan passed.jpg](./scan%20passed.jpg)
 
 
 * test-all.jpg
