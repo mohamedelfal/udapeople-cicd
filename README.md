@@ -9,9 +9,11 @@ Project *№3*: **Udapeople**
 * [Prerequisites](#prerequisites)
 * [Built With](#built-with)
 * [Section 1](#section-1)
-* [Section:1 file](#section-1-file)
+* [Section: 1 file](#section-1-file)
 * [Section 2](#section-2)
-* [Section:2 files](#section-2-files)
+* [Section: 2 files](#section-2-files)
+* [Section 3](#section-3)
+* [Section: 3 files](#section-3-files)
 * [Files Included](#files-included)
 * [License](#license)
 
@@ -35,7 +37,7 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 - [`Ansible`](https://www.ansible.com/) - Configuration management tool
 - [`Prometheus`](https://prometheus.io/) - Monitoring tool
 
-# Section 1: 
+# Section 1
 ## Selling CI/CD to your Team/Organization
 Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Automation for Cloud-Based Software Products
 >The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools.  
@@ -47,7 +49,7 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 ## Section 1: file
 * [`"presentation.pdf"`](./presentation.pdf)
 
-# Section 2: 
+# Section 2
 ## Deploying Working, Trustworthy Software
 ## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
@@ -118,7 +120,7 @@ Console output of various pre-deploy job failure scenarios:
 * Evidence of healthy back-end application. [URL04]
   * [URL04](./URL04.txt)
 
-# Section 3: 
+# Section 3
 ## Turn Errors into Sirens
 ## Surface critical server errors for diagnosis using centralized logging.
 * Evidence of Prometheus Server. [URL05]
@@ -136,16 +138,20 @@ Console output of various pre-deploy job failure scenarios:
   * [SCREENSHOT12](./screenshots/)
 
 ## Files Included
-* [`.circleci` folder](./.circleci)
-* [`backend` folder](./backend)
-* [`frontend` folder](./frontend)
-* [`util` folder](./util)
-* [`.gitignore` folder](./.gitignore)
-* [`Screenshots` folder](./screenshots/)
-* ["`presentation.pdf`" file](./presentation.pdf)
-* [`url.txt` file](./url.txt)
-* [`README.md` file](./README.md)
-* [`LICENSE.md` file](./LICENSE.md)
+* [`.circleci`](./.circleci)
+* [`backend`](./backend)
+* [`frontend`](./frontend)
+* [`util`](./util)
+* [`.gitignore`](./.gitignore)
+* [`Screenshots`](./screenshots/)
+* ["`presentation.pdf`"](./presentation.pdf)
+* [`URL01.txt`](./URL01.txt)
+* [`URL02.txt`](./URL02.txt)
+* [`URL03.txt`](./URL03.txt)
+* [`URL04.txt`](./URL04.txt)
+* [`URL05.txt`](./URL05.txt)
+* [`README.md`](./README.md)
+* [`LICENSE.md`](./LICENSE.md)
 
 ## License
 * [**License**](./LICENSE.md)
