@@ -47,7 +47,7 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
   >*Your presentation should be no longer than 5 slides*
 * Your presentation should be in `PDF` format named ["presentation.pdf"](./presentation.pdf) and should be included in your code repository root folder
 ## Section 1: file
-* [`"presentation.pdf"`](./presentation.pdf)
+* [`presentation.pdf`](./presentation.pdf)
 
 # Section 2
 ## Deploying Working, Trustworthy Software
@@ -144,7 +144,7 @@ Console output of various pre-deploy job failure scenarios:
 * [`util`](./util)  
 * [`.gitignore`](./.gitignore)  
 * [`Screenshots`](./screenshots/)  
-* ["`presentation.pdf`"](./presentation.pdf)  
+* [`presentation.pdf`](./presentation.pdf)  
 * [`URL01.txt`](./URL01.txt)  
 * [`URL02.txt`](./URL02.txt)  
 * [`URL03.txt`](./URL03.txt)  
