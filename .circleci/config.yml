@@ -1,15 +1,15 @@
-version: 2.1
+#version: 2.1
 
 orbs: 
   slack: circleci/slack@4.1 
 
-commands:
-  notify_on_failure:
-    steps:
-      - slack/notify:
-          event: fail
-          channel: udapeople
-          template: basic_fail_1
+#commands:
+#  notify_on_failure:
+#    steps:
+#      - slack/notify:
+#          event: fail
+#          channel: udapeople
+#          template: basic_fail_1
 #commands:
 #  destroy-environment:
 #    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
@@ -59,7 +59,7 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
-      - notify_on_failure
+#      - notify_on_failure
 
   build-backend:
     docker:
@@ -77,7 +77,7 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
-      - notify_on_failure
+#      - notify_on_failure
 
 
 
@@ -94,7 +94,7 @@ jobs:
             cd frontend
             npm install
             npm test
-      - notify_on_failure
+#      - notify_on_failure
 
 
 
@@ -111,7 +111,7 @@ jobs:
             cd backend
             npm install
             npm test
-      - notify_on_failure
+#      - notify_on_failure
 
   scan-frontend:
     docker:
@@ -127,7 +127,7 @@ jobs:
             npm install
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-      - notify_on_failure
+#      - notify_on_failure
 
   scan-backend:
     docker:
@@ -144,7 +144,7 @@ jobs:
 #            npm audit fix --force --audit-level=critical
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-      - notify_on_failure
+#      - notify_on_failure
       - slack/notify:
           custom: |
             {
