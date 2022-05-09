@@ -41,8 +41,6 @@ orbs:
 #             exit 1
 #            fi
 #
-
-jobs:
   notify:
     docker:
       - image: 'cimg/base:stable'
@@ -64,6 +62,8 @@ jobs:
               ]
             }
           event: always
+jobs:
+
   build-frontend:
     docker:
       - image: cimg/node:13.8.0
