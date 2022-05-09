@@ -45,7 +45,7 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 * **focus on** benefits that **create revenue, protect revenue, control costs**, or **reduce costs**.
 * The deliverable should be "near-production-quality", but you should try to time-box your work to about 30 minutes.
   >*Your presentation should be no longer than 5 slides*
-* Your presentation should be in `PDF` format named [`"presentation.pdf"`](./presentation.pdf) and should be included in your code repository root folder
+* Your presentation should be in `PDF` format named ["presentation.pdf"](./presentation.pdf) and should be included in your code repository root folder
 ## Section 1: file
 * [`"presentation.pdf"`](./presentation.pdf)
 
@@ -54,8 +54,8 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 ## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 
-* A public git repository with your project code. [`URL01`]
-* Evidence of code-based CI/CD configuration in the form of `yaml` files in your git repository.
+* A public git repository with your project code. [URL01]
+* Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.
 
 Console output of various pre-deploy job failure scenarios:
 * Build Jobs that failed because of compile errors. [SCREENSHOT01]
@@ -91,7 +91,7 @@ Console output of various pre-deploy job failure scenarios:
   * [`URL01.txt`](./URL01.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
 * [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
   * [`config.yml`](./.circleci/config.yml) <br> <br>
-* [Screenshots folder](./screenshots/) - This folder contains all required screenshots:
+* [`Screenshots folder](./screenshots/) - This folder contains all required screenshots:
   * Build Jobs that failed because of compile errors.
   * Failed unit tests.  
   * Failure because of vulnerable packages.
@@ -138,20 +138,20 @@ Console output of various pre-deploy job failure scenarios:
   * [SCREENSHOT12](./screenshots/)
 
 ## Files Included
-* [`.circleci`](./.circleci)
-* [`backend`](./backend)
-* [`frontend`](./frontend)
-* [`util`](./util)
-* [`.gitignore`](./.gitignore)
-* [`Screenshots`](./screenshots/)
-* ["`presentation.pdf`"](./presentation.pdf)
-* [`URL01.txt`](./URL01.txt)
-* [`URL02.txt`](./URL02.txt)
-* [`URL03.txt`](./URL03.txt)
-* [`URL04.txt`](./URL04.txt)
-* [`URL05.txt`](./URL05.txt)
-* [`README.md`](./README.md)
-* [`LICENSE.md`](./LICENSE.md)
+[`.circleci`](./.circleci)
+[`backend`](./backend)
+[`frontend`](./frontend)
+[`util`](./util)
+[`.gitignore`](./.gitignore)
+[`Screenshots`](./screenshots/)
+["`presentation.pdf`"](./presentation.pdf)
+[`URL01.txt`](./URL01.txt)
+[`URL02.txt`](./URL02.txt)
+[`URL03.txt`](./URL03.txt)
+[`URL04.txt`](./URL04.txt)
+[`URL05.txt`](./URL05.txt)
+[`README.md`](./README.md)
+[`LICENSE.md`](./LICENSE.md)
 
 ## License
 * [**License**](./LICENSE.md)
