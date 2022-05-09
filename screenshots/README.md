@@ -41,8 +41,9 @@
 * SCREENSHOT03-2.jpg
 ![SCREENSHOT03-2.jpg](./SCREENSHOT03-2.jpg)
 
-* scan-vulnerable2.jpg
-![scan-vulnerable2.jpg](./scan-vulnerable2.jpg)
+* SCREENSHOT03-3.jpg
+![SCREENSHOT03-3.jpg](./SCREENSHOT03-3.jpg)
+
 
 * scan passed.jpg
 ![scan passed.jpg](./scan%20passed.jpg)
