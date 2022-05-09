@@ -63,26 +63,25 @@ Failed unit tests. [SCREENSHOT02](./screenshots/SCREENSHOT02.png)
 Failure because of vulnerable packages. [SCREENSHOT03](./screenshots/SCREENSHOT03.png)  
 An alert from one of your failed builds. [SCREENSHOT04](./screenshots/)  
 Evidence in your code that:  
-
 Compile errors have been fixed.  
 Unit tests have been fixed.  
 All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
 
 ## Section 2: Files
 * A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * [`url.txt`](./url.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd
+  * [`url.txt`](./url.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
 * [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
-  * [`config.yml`](./.circleci/config.yml)
-* [Screenshots folder](./screenshots/) - This folder contains all required screenshots
-  * [SCREENSHOT01](./screenshots/SCREENSHOT01.png)
+  * [`config.yml`](./.circleci/config.yml) <br> <br>
+* [Screenshots folder](./screenshots/) - This folder contains all required screenshots:
+  * Build Jobs that failed because of compile errors.
+  * Failed unit tests.  
+  * Failure because of vulnerable packages.
+  * An alert from one of your failed builds. 
+  * Evidence in your code that:  
+     * Compile errors have been fixed.  
+     * Unit tests have been fixed.  
+     * All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
 
-  * [SCREENSHOT02](./screenshots/SCREENSHOT02.png)
-
-  * [SCREENSHOT03](./screenshots/SCREENSHOT03.png)
-
-  * [SCREENSHOT04](./screenshots/)
-
-  * [and more..](./screenshots/)
 
 ## Files Included
 * [`.circleci` folder](./.circleci)
