@@ -147,7 +147,10 @@ jobs:
 #            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 #      - notify_on_failure
-
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
       - slack/notify:
           custom: |
             {
