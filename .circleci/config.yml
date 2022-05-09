@@ -362,7 +362,7 @@ workflows:
   send-notification:
     jobs:
       - notify:
-          context: slackap
+          context: slackapp
 #  send-notification:
 #    jobs:
 #      - notify:
