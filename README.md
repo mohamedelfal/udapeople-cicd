@@ -52,10 +52,10 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 
 * A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * `url`: https://github.com/mohamedelfal/udapeople-cicd
+  * [`url`](https://github.com/mohamedelfal/udapeople-cicd): https://github.com/mohamedelfal/udapeople-cicd
 
 * Evidence of code-based CI/CD configuration in the form of `yaml` files in your git repository.
-  * [`yaml` file](./.circleci/config.yaml)
+  * [`yaml` file](./.circleci/config.yml)
 Console output of various pre-deploy job failure scenarios:
 
 Build Jobs that failed because of compile errors. [SCREENSHOT01](./screenshots/SCREENSHOT01.png)  
@@ -70,9 +70,9 @@ All critical security vulnerabilities caught by the “Analyze” job have been 
 
 ## Section 2: Files
 * A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * [`url.txt`](./url.txt) - File containing a public git repository url : https://github.com/mohamedelfal/udapeople-cicd
-* [`config.yaml`]((./.circleci/config.yaml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
-  * [`config.yaml`](./.circleci/config.yaml)
+  * [`url.txt`](./url.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd
+* [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
+  * [`config.yml`](./.circleci/config.yml)
 * [Screenshots folder](./screenshots/) - This folder contains all required screenshots
   * [SCREENSHOT01](./screenshots/SCREENSHOT01.png)
 
