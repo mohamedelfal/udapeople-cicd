@@ -58,7 +58,8 @@ jobs:
             npm run build
       - save_cache:
           paths: [frontend/node_modules]
-          key: frontend-deps      - notify_on_failure
+          key: frontend-deps      
+      - notify_on_failure
 
           
   build-backend:
