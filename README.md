@@ -88,8 +88,8 @@ Console output of various pre-deploy job failure scenarios:
 ## Section 2: Files
 ## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 * A public git repository with your project code. [URL01](https://github.com/mohamedelfal/udapeople-cicd)
-  * [`URL01.txt`](./URL01.txt) - File containing a public git repository [`url`](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
-* [`config.yml`]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of `yaml` files in git repository.
+  * [`URL01`](./urls.txt) - File containing a public git repository [url](https://github.com/mohamedelfal/udapeople-cicd) : https://github.com/mohamedelfal/udapeople-cicd <br> <br>
+* [config.yml]((./.circleci/config.yml)) - code-based CI/CD configuration in the form of yaml files in git repository.
   * [`config.yml`](./.circleci/config.yml) <br> <br>
   
 * [`Screenshots folder](./screenshots/) - This folder contains all required screenshots:
@@ -129,12 +129,12 @@ Console output of various pre-deploy job failure scenarios:
 * Evidence that deploy jobs only happen on master branch. [SCREENSHOT10]
   * [SCREENSHOT10](./screenshots/)
 * Evidence of deployed and functioning front-end application in an S3 bucket [URL02] and in CloudFront. [URL03]
-  * [URL02](./URL02.txt)
-  * [URL03](./URL03.txt)
+  * [URL02](./urls.txt)
+  * [URL03](./urls.txt)
   * [URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)
     ![URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)
 * Evidence of healthy back-end application. [URL04]
-  * [URL04](./URL04.txt)
+  * [URL04](./urls.txt)
   * [URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)
    ![URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)
 
@@ -149,7 +149,7 @@ Console output of various pre-deploy job failure scenarios:
 # Section 3: files
 ## Surface critical server errors for diagnosis using centralized logging.
 * Evidence of Prometheus Server. [URL05]
-  * [URL05](./URL05.txt)
+  * [URL05](./urls.txt)
   * [URL05_SCREENSHOT](./URL05_SCREENSHOT.jpg)
     ![URL05_SCREENSHOT](./URL05_SCREENSHOT.jpg)
 * Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]
@@ -165,11 +165,7 @@ Console output of various pre-deploy job failure scenarios:
 * [`.gitignore`](./.gitignore)  
 * [`Screenshots`](./screenshots/)  
 * [`presentation.pdf`](./presentation.pdf)  
-* [`URL01.txt`](./URL01.txt)  
-* [`URL02.txt`](./URL02.txt)  
-* [`URL03.txt`](./URL03.txt)  
-* [`URL04.txt`](./URL04.txt)  
-* [`URL05.txt`](./URL05.txt)  
+* [`urls.txt`](./urls.txt)    
 * [`README.md`](./README.md)  
 * [`LICENSE.md`](./LICENSE.md)  
 
