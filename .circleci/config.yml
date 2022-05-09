@@ -313,14 +313,14 @@ jobs:
 #            fi
 #        
   
-  notify_on_success:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - slack/notify:
-          channel: udapeople
-          event: pass
-          template: success_tagged_deploy_1
+#  notify_on_success:
+#    docker:
+#      - image: cimg/base:stable
+#    steps:
+#      - slack/notify:
+#          channel: udapeople
+#          event: pass
+#          template: success_tagged_deploy_1
 
 
 workflows:
@@ -330,20 +330,24 @@ workflows:
       - build-backend
       - test-frontend:
           requires: [build-frontend]
+          context: slackapp
       - test-backend:
           requires: [build-backend]
+          context: slackapp
       - scan-backend:
           requires: [build-backend]
+          context: slackapp
       - scan-frontend:
           requires: [build-frontend]
-      - notify_on_failure
-      - notify_on_success:
-          requires:
-            - test-frontend
-            - test-backend
-            - scan-backend
-            - scan-frontend
-
+          context: slackapp
+#      - notify_on_failure
+#      - notify_on_success:
+#          requires:
+#            - test-frontend
+#            - test-backend
+#            - scan-backend
+#            - scan-frontend
+#
 #      - deploy-infrastructure:
 #          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
 #          filters:
