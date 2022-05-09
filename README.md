@@ -98,7 +98,7 @@ Console output of various pre-deploy job failure scenarios:
   * Failed unit tests.  
     * [SCREENSHOT02](./screenshots/SCREENSHOT02.png)
   * Failure because of vulnerable packages. 
-    * [SCREENSHOT03](./screenshots/SCREENSHOT03.png)
+    * [SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)
   * An alert from one of your failed builds. 
     * [SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail
     * [SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack
