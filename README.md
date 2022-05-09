@@ -131,8 +131,12 @@ Console output of various pre-deploy job failure scenarios:
 * Evidence of deployed and functioning front-end application in an S3 bucket [URL02] and in CloudFront. [URL03]
   * [URL02](./URL02.txt)
   * [URL03](./URL03.txt)
+  * [URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)
+    ![URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)
 * Evidence of healthy back-end application. [URL04]
   * [URL04](./URL04.txt)
+  * [URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)
+   ![URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)
 
 # Section 3
 ## Turn Errors into Sirens
@@ -146,6 +150,8 @@ Console output of various pre-deploy job failure scenarios:
 ## Surface critical server errors for diagnosis using centralized logging.
 * Evidence of Prometheus Server. [URL05]
   * [URL05](./URL05.txt)
+  * [URL05_SCREENSHOT](./URL05_SCREENSHOT.jpg)
+    ![URL05_SCREENSHOT](./URL05_SCREENSHOT.jpg)
 * Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]
   * [SCREENSHOT11](./screenshots/)
 * Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. [SCREENSHOT12]
