@@ -1,7 +1,7 @@
 # Screenshots
  
 # BUILD BACKEND
-* SCREENSHOT01.png  
+## SCREENSHOT01 
  ![SCREENSHOT01.png](./SCREENSHOT01.png)
 * SCREENSHOT01-fix.png 
 ![SCREENSHOT01-fix](./SCREENSHOT01-fix.png)
@@ -13,7 +13,7 @@
 ![build-fix.png](./build-fix.png)
 
 # TEST BACKEND
-* SCREENSHOT02.png
+## SCREENSHOT02
 ![SCREENSHOT02.png](./SCREENSHOT02.png)
 
 * backend-err.png
@@ -32,7 +32,7 @@
 ![frontend-fix.jpg](./frontend-fix.jpg)
 
 # SCAN FRONTEND
-* SCREENSHOT03.jpg
+## SCREENSHOT03
 ![SCREENSHOT03.jpg](./SCREENSHOT03.jpg)
 
 * SCREENSHOT03-1.jpg
@@ -60,8 +60,8 @@
 * notifyPass.jpg
 ![notifyPass.jpg](./notifyPass.jpg)
 
-* e-Mail-Notification.jpg
+## SCREENSHOT04 e-mail-Notification
 ![e-Mail-Notification.jpg](./e-Mail-Notification.jpg)
 
-* slack-notify.jpg
+## SCREENSHOT04 slack-Notification
 ![slack-notify.jpg](./slack-notify.jpg)
