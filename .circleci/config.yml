@@ -2,7 +2,17 @@ version: 2.1
 
 orbs: 
   slack: circleci/slack@4.1 
-
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - slack/notify:
+          event: fail
+          mentions: '@EngineeringTeam'
+          template: basic_fail_1
+      - slack/notify:
+          event: pass
+          template: success_tagged_deploy_1
 #commands:
 #  notify_on_failure:
 #    steps:
@@ -42,17 +52,7 @@ orbs:
 #            fi
 #
 jobs:
-  notify:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
-      - slack/notify:
-          event: fail
-          mentions: '@EngineeringTeam'
-          template: basic_fail_1
-      - slack/notify:
-          event: pass
-          template: success_tagged_deploy_1
+
   build-frontend:
     docker:
       - image: cimg/node:13.8.0
