@@ -58,14 +58,14 @@ Utilize Deployment Strategies to design and build CI/CD pipelines that support C
 * Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.
 
 Console output of various pre-deploy job failure scenarios:
-* Build Jobs that failed because of compile errors. [SCREENSHOT01]
-* Failed unit tests. [SCREENSHOT02]
-* Failure because of vulnerable packages. [SCREENSHOT03]
-* An alert from one of your failed builds. [SCREENSHOT04]
+* Build Jobs that failed because of compile errors. [SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)
+* Failed unit tests. [SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)
+* Failure because of vulnerable packages. [SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)
+* An alert from one of your failed builds. [SCREENSHOT04](./screenshots/SCREENSHOT04.png)
 * Evidence in your code that:  
-  * Compile errors have been fixed.  
-  * Unit tests have been fixed.  
-  * All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
+  * [Compile errors have been fixed.  ](./screenshots/SCREENSHOT01-fix.jpg)
+  * [Unit tests have been fixed.  ](./screenshots/SCREENSHOT02-fix.jpg)
+  * [All critical security vulnerabilities caught by the “Analyze” job have been fixed.  ](./screenshots/SCREENSHOT03-fix.jpg)
 
 ## Utilize a configuration management tool to accomplish deployment to cloud-based servers.
 * Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]
@@ -93,28 +93,31 @@ Console output of various pre-deploy job failure scenarios:
   * [`config.yml`](./.circleci/config.yml) <br> <br>
   
 * [`Screenshots folder](./screenshots/) - This folder contains all required screenshots:
-  * Build Jobs that failed because of compile errors.
-    * [`SCREENSHOT01`](./screenshots/SCREENSHOT01.png)
-      ![SCREENSHOT01](./screenshots/SCREENSHOT01.png)
-  * Failed unit tests.  
-    * [`SCREENSHOT02`](./screenshots/SCREENSHOT02.png)
-      ![SCREENSHOT02](./screenshots/SCREENSHOT02.png)
-  * Failure because of vulnerable packages. 
+  * [Build Jobs that failed because of compile errors.](./screenshots/SCREENSHOT01.jpg)
+    * [`SCREENSHOT01`](./screenshots/SCREENSHOT01.jpg)
+      ![SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)
+  * [Failed unit tests.  ](./screenshots/SCREENSHOT02.jpg)
+    * [`SCREENSHOT02`](./screenshots/SCREENSHOT02.jpg)
+      ![SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)
+  * [Failure because of vulnerable packages. ](./screenshots/SCREENSHOT03.jpg)
     * [`SCREENSHOT03`](./screenshots/SCREENSHOT03.jpg)
       ![SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)
-    * [SCREENSHOT03-1](./screenshots/SCREENSHOT03-1.jpg)
-      ![SCREENSHOT03-1](./screenshots/SCREENSHOT03-1.jpg)
 
-  * An alert from one of your failed builds. 
+  * [An alert from one of your failed builds. ](./screenshots/SCREENSHOT04.png)
     * [`SCREENSHOT04`](./screenshots/SCREENSHOT04.png) e-mail Notification
       ![SCREENSHOT04](./screenshots/SCREENSHOT04.png)
     * [`SCREENSHOT04`](./screenshots/SCREENSHOT04.jpg) slack Notification 
       ![SCREENSHOT04](./screenshots/SCREENSHOT04.jpg)
   * Evidence in your code that:  
-     * Compile errors have been fixed.  
-     * Unit tests have been fixed.  
-     * All critical security vulnerabilities caught by the “Analyze” job have been fixed.  
-
+     * [Compile errors have been fixed.  ](./screenshots/SCREENSHOT01-fix.jpg)
+       * [`SCREENSHOT01-fix`](./screenshots/SCREENSHOT01-fix.jpg)
+         ![SCREENSHOT01-fix](./screenshots/SCREENSHOT01-fix.jpg)
+     * [Unit tests have been fixed.         ](./screenshots/SCREENSHOT02-fix.jpg)
+       * [`SCREENSHOT02-fix`](./screenshots/SCREENSHOT02-fix.jpg)
+         ![SCREENSHOT02-fix](./screenshots/SCREENSHOT02-fix.jpg)
+     * [All critical security vulnerabilities caught by the “Analyze” job have been fixed.  ](./screenshots/SCREENSHOT03-fix.jpg)
+       * [`SCREENSHOT03-fix`](./screenshots/SCREENSHOT03-fix.jpg)
+         ![SCREENSHOT03-fix](./screenshots/SCREENSHOT03-fix.jpg)
 ## Utilize a configuration management tool to accomplish deployment to cloud-based servers.
 * Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]
   * [SCREENSHOT05](./screenshots/)
