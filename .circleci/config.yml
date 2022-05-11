@@ -1,7 +1,7 @@
 version: 2.1
 
-orbs: 
-  slack: circleci/slack@4.1 
+#orbs: 
+#  slack: circleci/slack@4.1 
 
 #commands:
 #  notify_on_failure:
@@ -242,8 +242,7 @@ jobs:
             cd backend
             npm install
             npm run migrations > migrations_dump.txt
-            npm audit fix --force --audit-level=critical
-            npm audit --audit-level=critical
+
       - run:
           name: Send migration status to kvdb.io
           command: |
