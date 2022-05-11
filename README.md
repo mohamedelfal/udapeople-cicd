@@ -49,7 +49,7 @@ Explain the Fundamentals and Benefits of CI/CD to Achieve, Build, and Deploy Aut
 ## Section 1: file
 * [`presentation.pdf`](./presentation.pdf)
 
-# Section-2
+# Section 2
 ## Deploying Working, Trustworthy Software
 ## Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
