@@ -340,14 +340,14 @@ deploy-infrastructure:
 #            fi
 #        
   
-  notify_on_success:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - slack/notify:
-          channel: udapeople
-          event: pass
-          template: success_tagged_deploy_1
+#  notify_on_success:
+#    docker:
+#      - image: cimg/base:stable
+#    steps:
+#      - slack/notify:
+#          channel: udapeople
+#          event: pass
+#          template: success_tagged_deploy_1
 
 
 workflows:
@@ -364,18 +364,18 @@ workflows:
       - scan-frontend:
           requires: [build-frontend]
           
-      - notify_on_success:
-          requires:
-            - test-frontend
-            - test-backend
-            - scan-backend
-            - scan-frontend
+#      - notify_on_success:
+#          requires:
+#            - test-frontend
+#            - test-backend
+#            - scan-backend
+#            - scan-frontend
 #
-#      - deploy-infrastructure:
-#          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
-#          filters:
-#            branches:
-#              only: [test-feature-branch]
+      - deploy-infrastructure:
+          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
+          filters:
+            branches:
+              only: [master]
 #      - configure-infrastructure:
 #          requires: [deploy-infrastructure]
 #      - run-migrations:
