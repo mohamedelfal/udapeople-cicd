@@ -46,25 +46,25 @@ commands:
             aws s3 rm s3://udapeople-<<parameters.Workflow_ID>> --recursive
             aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
 
-#  revert-migrations:
-#    description: Revert the last migration
-#    parameters:
-#      Workflow_ID:
-#        type: string
-#        default: ${CIRCLE_WORKFLOW_ID:0:7}
-#    steps:
-#      - run:
-#          name: Revert migrations
-#          when: on_fail
-#          command: |
-#            SUCCESS=$(curl --insecure  https://kvdb.io/12My25UnGG4diWopfy2wzZ/migration_<< parameters.Workflow_ID >>)
-#            # Logic for reverting the database state
-#            if (( $SUCCESS == 1 ));
-#            then
-#              cd ~/project/backend
-#              npm install
-#              npm run migration:revert
-#            fi
+  revert-migrations:
+    description: Revert the last migration
+    parameters:
+      Workflow_ID:
+        type: string
+        default: ${CIRCLE_WORKFLOW_ID:0:7}
+    steps:
+      - run:
+          name: Revert migrations
+          when: on_fail
+          command: |
+            SUCCESS=$(curl --insecure  https://kvdb.io/12My25UnGG4diWopfy2wzZ/migration_<< parameters.Workflow_ID >>)
+            # Logic for reverting the database state
+            if (( $SUCCESS == 1 ));
+            then
+              cd ~/project/backend
+              npm install
+              npm run migration:revert
+            fi
 
 jobs:
 
@@ -230,28 +230,29 @@ jobs:
             ansible-playbook -i inventory.txt configure-server.yml
       - destroy-environment
 
-#  run-migrations:
-#    docker:
-#      - image: cimg/node:13.8.0
-#    steps:
-#      - checkout
-#      - install_awscli
-#      - run:
-#          name: Run migrations
-#          command: |
-#            cd backend
-#            npm install
-#            npm run migrations > migrations_dump.txt
-#
-#      - run:
-#          name: Send migration status to kvdb.io
-#          command: |
-#            if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
-#            then
-#              curl https://kvdb.io/12My25UnGG4diWopfy2wzZ/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
-#            fi
-#      - destroy-environment
-#      - revert-migrations      
+  run-migrations:
+    docker:
+      - image: cimg/node:13.8.0
+    steps:
+      - checkout
+      - install_awscli
+      - run:
+          name: Run migrations
+          command: |
+            cd backend
+            npm install
+            npm run migrations > migrations_dump.txt
+
+      - run:
+          name: Send migration status to kvdb.io
+          command: |
+            if 
+              grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
+            then
+              curl https://kvdb.io/12My25UnGG4diWopfy2wzZ/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
+            fi
+      - destroy-environment
+      - revert-migrations      
 
 #  deploy-frontend:
 #    docker:
@@ -387,8 +388,8 @@ workflows:
               only: [main]
       - configure-infrastructure:
           requires: [deploy-infrastructure]
-#      - run-migrations:
-#          requires: [configure-infrastructure]
+      - run-migrations:
+          requires: [configure-infrastructure]
 #      - deploy-frontend:
 #          requires: [run-migrations]
 #      - deploy-backend:
