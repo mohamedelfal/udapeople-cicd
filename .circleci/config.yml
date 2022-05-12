@@ -21,10 +21,10 @@ commands:
             unzip awscliv2.zip
             sudo ./aws/install
   install_ansible: 
-    description: Install Ansible v2       
+    description: Install Ansible       
     steps:
       - run:
-          name: Install Ansible v2
+          name: Install Ansible
           command: |
              sudo apt install software-properties-common
              sudo apt update
