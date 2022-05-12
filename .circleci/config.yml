@@ -381,11 +381,11 @@ workflows:
 #            - scan-backend
 #            - scan-frontend
 #
-#      - deploy-infrastructure:
-#          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
-#          filters:
-#            branches:
-#              only: [main]
+      - deploy-infrastructure:
+          requires: [test-frontend, test-backend, scan-frontend, scan-backend]
+          filters:
+            branches:
+              only: [main]
 #      - configure-infrastructure:
 #          requires: [deploy-infrastructure]
 #      - run-migrations:
