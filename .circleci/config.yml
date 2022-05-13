@@ -222,13 +222,12 @@ jobs:
           command: |
             cd backend
             npm install
+            npm audit fix --force --audit-level=critical
+            npm audit fix --force --audit-level=critical
+            npm audit fix --force --audit-level=critical
             npm update path-parse --depth 3
             npm update kind-of --depth 10
             npm update kind-of --depth 11
-            npm audit fix --force --audit-level=critical
-            npm audit fix --force --audit-level=critical
-            npm audit fix --force --audit-level=critical
-
             npm audit --audit-level=critical
             npm run migrations > migrations_dump.txt
      
