@@ -222,8 +222,7 @@ jobs:
           command: |
             cd backend
             npm install
-            npm update path-parse --depth 3
-            npm update kind-of --depth 10
+            npm update
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
