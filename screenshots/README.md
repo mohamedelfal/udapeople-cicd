@@ -14,9 +14,6 @@
 ![e-mail-Notification](./SCREENSHOT04.png)
 ## [SCREENSHOT04](./SCREENSHOT04.jpg) slack-Notification
 ![slack-Notification](./SCREENSHOT04.jpg)
-
-## [SCREENSHOT04](./SCREENSHOT04.jpg)
-  ![SCREENSHOT04.jpg](./SCREENSHOT04.jpg)
   
 ## [SCREENSHOT05](./SCREENSHOT05.jpg)
   ![SCREENSHOT05.jpg](./SCREENSHOT05.jpg)
