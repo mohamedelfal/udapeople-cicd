@@ -1,7 +1,6 @@
 
 # Udacity Advanced Cloud DevOps 
-
-### Give your Application Auto-Deploy Superpowers
+# Give Your Application Auto-Deploy Superpowers
 Project *№3*: **Udapeople**   
 *Cloud DevOps Project*
 ## Table Of Contents
