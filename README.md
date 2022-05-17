@@ -23,7 +23,8 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 * [GitHub account](https://github.com/)
 * [CircleCi account](https://circleci.com/)
 * [AWS account](https://aws.amazon.com/)
-* [ThisDB api key and bucket](https://thisdb.com/)
+* [kvdb api bucket](https://kvdb.io/)
+* [Slack api App](https://api.slack.com/)
 
 ## Built With
 
@@ -73,16 +74,16 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 
 
 ## Files Included
-* [`.circleci`](./.circleci)  
-* [`backend`](./backend)
-* [`frontend`](./frontend)  
-* [`util`](./util)  
-* [`.gitignore`](./.gitignore)  
-* [`Screenshots`](./screenshots/)  
-* [`presentation.pdf`](./presentation.pdf)  
-* [`urls.txt`](./urls.txt)    
-* [`README.md`](./README.md)  
-* [`LICENSE.md`](./LICENSE.md)  
+* [.circleci](./.circleci)  
+* [backend](./backend)
+* [frontend](./frontend)  
+* [util](./util)  
+* [.gitignore](./.gitignore)  
+* [Screenshots](./screenshots/)  
+* [presentation.pdf](./presentation.pdf)  
+* [urls.txt](./urls.txt)    
+* [README.md](./README.md)  
+* [LICENSE.md](./LICENSE.md)  
 
 ## License
 * [**License**](./LICENSE.md)
