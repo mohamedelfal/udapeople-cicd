@@ -8,12 +8,9 @@ Project *№3*: **Udapeople**
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
 * [Built With](#built-with)
-* [Section 1](#section-1)
-* [Section: 1 file](#section-1-file)
-* [Section 2](#section-2)
-* [Section: 2 files](#section-2-files)
-* [Section 3](#section-3)
-* [Section: 3 files](#section-3-files)
+* [Section 1: Selling CI/CD to your Team/Organization](#section-1-selling-cicd-to-your-teamorganization)
+* [ection 2: Deploying Working, Trustworthy Software](#section-2-deploying-working-trustworthy-software)
+* [Section 3: Turn Errors into Sirens](#section-3-turn-errors-into-sirens)
 * [Files Included](#files-included)
 * [License](#license)
 
@@ -21,21 +18,21 @@ Project *№3*: **Udapeople**
 A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and CloudFront and monitored with Prometheus, with Slack and E-mail notifications used for alerts.
 
 ## Prerequisites
-* [`Nodejs 13`](https://nodejs.org/en/)
-* [`Docker`](https://www.docker.com/)
-* [`GitHub account`](https://github.com/)
-* [`CircleCi account`](https://circleci.com/)
-* [`AWS account`](https://aws.amazon.com/)
-* [`ThisDB api key and bucket`](https://thisdb.com/)
+* [Nodejs 13](https://nodejs.org/en/)
+* [Docker](https://www.docker.com/)
+* [GitHub account](https://github.com/)
+* [CircleCi account](https://circleci.com/)
+* [AWS account](https://aws.amazon.com/)
+* [ThisDB api key and bucket](https://thisdb.com/)
 
 ## Built With
 
-- [`Circle CI`](www.circleci.com) - Cloud-based CI/CD service
-- [`Amazon AWS`](https://aws.amazon.com/) - Cloud services
-- [`AWS CLI`](https://aws.amazon.com/cli/) - Command-line tool for AWS
-- [`CloudFormation`](https://aws.amazon.com/cloudformation/) - Infrastrcuture as code
-- [`Ansible`](https://www.ansible.com/) - Configuration management tool
-- [`Prometheus`](https://prometheus.io/) - Monitoring tool
+- [Circle CI](www.circleci.com) - Cloud-based CI/CD service
+- [Amazon AWS](https://aws.amazon.com/) - Cloud services
+- [AWS CLI](https://aws.amazon.com/cli/) - Command-line tool for AWS
+- [CloudFormation](https://aws.amazon.com/cloudformation/) - Infrastrcuture as code
+- [Ansible](https://www.ansible.com/) - Configuration management tool
+- [Prometheus](https://prometheus.io/) - Monitoring tool
 
 # Give Your Application Auto-Deploy Superpowers
 ## Section 1: Selling CI/CD to your Team/Organization
@@ -48,31 +45,31 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 ## Section 2: Deploying Working, Trustworthy Software
 |CRITERIA|MEETS SPECIFICATIONS|Files|
 |:-----|:-----|:-----|
-|Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.|A public git repository with your project code. [URL01]|https://github.com/mohamedelfal/udapeople-cicd|
+|Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.|A public git repository with your project code. |[URL01](https://github.com/mohamedelfal/udapeople-cicd/)<br>https://github.com/mohamedelfal/udapeople-cicd/|
 ||Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.|[config.yml](./.circleci/config.yml)|
-||***Console output of various pre-deploy job failure scenarios:***|
-||Build Jobs that failed because of compile errors. [SCREENSHOT01]|[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|
-||Failed unit tests. [SCREENSHOT02]|[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)|
-||Failure because of vulnerable packages. [SCREENSHOT03]|[SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)|
-||An alert from one of your failed builds. [SCREENSHOT04]|[SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail Notification<br>[SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack Notification |
+||***Console output of various pre-deploy job failure scenarios:***||
+||Build Jobs that failed because of compile errors. |[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|
+||Failed unit tests. |[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)|
+||Failure because of vulnerable packages. |[SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)|
+||An alert from one of your failed builds. |[SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail Notification<br>[SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack Notification |
 ||***Evidence in your code that:***||
 ||Compile errors have been fixed.<br>Unit tests have been fixed.<br>All critical security vulnerabilities caught by the “Analyze” job have been fixed|[.circleci](./.circleci)<br>[backend](./backend)<br>[frontend](./frontend)|
-|Utilize a configuration management tool to accomplish deployment to cloud-based servers.|Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]|[SCREENSHOT05](./screenshots/SCREENSHOT05.jpg)|
-||Console output of a smoke test job that is failing appropriately. [SCREENSHOT06]|[SCREENSHOT06](./screenshots/SCREENSHOT06.jpg)|
-||Console output of a successful rollback after a failed smoke test. [SCREENSHOT07]||
-||Console output of successful promotion of new version to production in CloudFront. [SCREENSHOT08]||
-||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. [SCREENSHOT09]||
-||Evidence that the deploy jobs only happen on the master branch. [SCREENSHOT10]||
-||Evidence of deployed and functioning front-end application in an S3 bucket [URL02].||
-||Evidence of deployed and functioning front-end application in CloudFront. [URL03_SCREENSHOT]||
-||Evidence of healthy back-end application. [URL04_SCREENSHOT||
+|Utilize a configuration management tool to accomplish deployment to cloud-based servers.|Console output of appropriate failure for infrastructure creation job (using CloudFormation). |[SCREENSHOT05](./screenshots/SCREENSHOT05.jpg)|
+||Console output of a smoke test job that is failing appropriately. |[SCREENSHOT06](./screenshots/SCREENSHOT06.jpg)|
+||Console output of a successful rollback after a failed smoke test. |[SCREENSHOT07](./screenshots/SCREENSHOT07.jpg)|
+||Console output of successful promotion of new version to production in CloudFront. |[SCREENSHOT08](./screenshots/SCREENSHOT08.jpg)|
+||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. |[SCREENSHOT09](./screenshots/SCREENSHOT09.jpg)|
+||Evidence that the deploy jobs only happen on the master branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|
+||Evidence of deployed and functioning front-end application in an S3 bucket .|[URL02]<br>[URL02_SCREENSHOT](./screenshots/URL02_SCREENSHOT.jpg)|
+||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|
+||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|
 
 ## Section 3: Turn Errors into Sirens
 |CRITERIA|MEETS SPECIFICATIONS|Files|
 |:-----|:-----|:-----|
-|Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. [URL05_SCREENSHOT].||
-||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]||
-||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. [SCREENSHOT12]||
+|Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|
+||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11](./screenshots/SCREENSHOT11.jpg)|
+||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. |[SCREENSHOT12](./screenshots/SCREENSHOT12.jpg)|
 
 
 ## Files Included
