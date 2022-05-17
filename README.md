@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop)
 
 # Udacity Advanced Cloud DevOps 
 # Give Your Application Auto-Deploy Superpowers
