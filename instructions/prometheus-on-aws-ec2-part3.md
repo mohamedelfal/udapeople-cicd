@@ -1,6 +1,6 @@
 
 # [Prometheus Service Discovery on AWS EC2](./prometheus-on-aws-ec2-part3.md)
-
+Author: [Héctor Rosales](https://codewizardly.com/authors/hector/)
 ![image](https://user-images.githubusercontent.com/100445644/168937235-8241dfaf-92fe-4d80-9334-175c16c1a034.png)
    
 Follow the complete story:
