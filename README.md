@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main)
+[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/instructions.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/instructions)
 
 # Udacity Advanced Cloud DevOps 
 # Give Your Application Auto-Deploy Superpowers
