@@ -1,5 +1,5 @@
 
-# [2- Prometheus Node Exporter on AWS EC2](./instructions/prometheus-on-aws-ec2-part2.md)  
+# [2- Prometheus Node Exporter on AWS EC2](./prometheus-on-aws-ec2-part2.md)  
 Author:
 [Héctor Rosales](https://codewizardly.com/authors/hector/)  
 
@@ -9,10 +9,10 @@ The next step is to launch a second AWS EC2 instance, install Prometheus Node Ex
 
 To continue reading follow these links:  
 
-1- [Install Prometheus on AWS EC2](./instructions/prometheus-on-aws-ec2-part1.md)  
-2- [Prometheus Node Exporter on AWS EC2](./instructions/prometheus-on-aws-ec2-part2.md)  
-3- [Prometheus Discovery Service on AWS EC2](./instructions/prometheus-on-aws-ec2-part3.md)  
-4- [Prometheus Alertmanager Sending Emails](./instructions/prometheus-on-aws-ec2-part4.md)  
+1- [Install Prometheus on AWS EC2](./prometheus-on-aws-ec2-part1.md)  
+2- [Prometheus Node Exporter on AWS EC2](./prometheus-on-aws-ec2-part2.md)  
+3- [Prometheus Discovery Service on AWS EC2](./prometheus-on-aws-ec2-part3.md)  
+4- [Prometheus Alertmanager Sending Emails](./prometheus-on-aws-ec2-part4.md)  
 
 ## Prometheus Node Exporter  
 There are [many exporters](https://prometheus.io/docs/instrumenting/exporters) and integrations available for Prometheus.   
