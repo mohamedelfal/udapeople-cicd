@@ -108,7 +108,7 @@ Change the information accordingly to your results.
 Let’s connect to the AWS EC2 instance where we are going to install Prometheus. 
 `prometheus.pem` is the key that was generated previously.  
 
-```Ubuntu
+```console
 ssh -i prometheus.pem ubuntu@ec2-3-17-28.53.us-east-2.compute.amazonaws.com
 ``` 
 
@@ -117,7 +117,7 @@ This will help to isolate Prometheus and add protection to the system.
 I really like this [stackexchange answer](https://apple.stackexchange.com/questions/192365/is-it-ok-to-use-the-root-user-as-a-normal-user/192422#192422), it could give you a better explanation of why we should avoid the usage of the root user for everything.   
 Also we need to create a directory to host Prometheus configuration and another one to host its data.  
 
-```Ubuntu
+```bash
 sudo useradd --no-create-home prometheus
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
@@ -125,7 +125,7 @@ sudo mkdir /var/lib/prometheus
 
 Now we need to install Prometheus.
 
-```Ubuntu
+```bash
 wget https://github.com/prometheus/prometheus/releases/download/v2.19.0/prometheus-2.19.0.linux-amd64.tar.gz
 tar xvfz prometheus-2.19.0.linux-amd64.tar.gz
 
@@ -180,7 +180,7 @@ WantedBy=multi-user.target
 
 Let’s change the permissions of the directories, files and binaries we just added to our system.  
 
-```cmd
+```bash
 sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
@@ -191,7 +191,7 @@ sudo chown -R prometheus:prometheus /var/lib/prometheus
 
 Now we need to configure systemd.  
 
-```cmd
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
 ```  
