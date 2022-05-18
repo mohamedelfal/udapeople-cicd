@@ -21,7 +21,7 @@ As mentioned above, in this example we are going to install Prometheus Node Expo
  >“Prometheus exporter for hardware and OS metrics exposed by *NIX kernels, written in Go with pluggable metric collectors.”
 
 **Setup an EC2 Machine**   
-The instructions are similar to [the steps we followed to create a Prometheus EC2 instance](https://codewizardly.com/prometheus-on-aws-ec2-part1/#create-an-aws-ec2-instance) with some light differences.
+The instructions are similar to [the steps we followed to create a Prometheus EC2 instance](./prometheus-on-aws-ec2-part1.md) with some light differences.
 
 One of these differences is that we don’t need to create a new Key Pair since we already created one for Prometheus, as long we have this key safely stored we can choose it from the drop down.
 
