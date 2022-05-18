@@ -16,10 +16,10 @@ Prometheus is an awesome open-source tool for monitoring, designed for reliabili
 and meant to be the system you look for during an outage to allow you to quickly diagnose problems.
 
 The content is divided in the following topics:  
-**1-Install Prometheus on AWS EC2**  
-**2-Prometheus Node Exporter on AWS EC2**  
-**3-Prometheus Discovery Service on AWS EC2**  
-**4-Prometheus Alertmanager Sending Emails**  
+**[1-Install Prometheus on AWS EC2](./instructions/prometheus-on-aws-ec2-part1.md)**  
+**[2-Prometheus Node Exporter on AWS EC2](./instructions/prometheus-on-aws-ec2-part2.md)**  
+**[3-Prometheus Discovery Service on AWS EC2](./instructions/prometheus-on-aws-ec2-part3.md)**  
+**[4-Prometheus Alertmanager Sending Emails](./instructions/prometheus-on-aws-ec2-part4.md)**  
 
 **About AWS Free Tier**  
 AWS offers a Free Tier after creating an account and there are two main types of tiers I want to list:
