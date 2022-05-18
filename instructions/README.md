@@ -81,4 +81,5 @@ Prometheus values reliability. You can always view what statistics are available
 
 ## 
 
-*[resource](https://prometheus.io/)*
+*[resource](https://prometheus.io/)*  
+*[Prometheus.io - Configuring Prometheus to Monitor Itself](https://prometheus.io/docs/prometheus/latest/getting_started/#configuring-prometheus-to-monitor-itself)*  
