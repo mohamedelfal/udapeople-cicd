@@ -108,3 +108,13 @@ sudo systemctl restart prometheus
 Let’s see if Prometheus is finding our Node-Exporter instance.   
 Go to ***`http://ec2-3-17-28.53.us-east-2.compute.amazonaws.com:9090/targets`***.   
 You might see other instances registered since Prometheus is looking up for all the EC2 instances in the same network.Service Discovery
+
+
+## Index of Topics
+[Next topic -->](./prometheus-on-aws-ec2-part4.md)  
+[<-- Previous topic ](./prometheus-on-aws-ec2-part2.md)  
+
+**[1-Install Prometheus on AWS EC2](./prometheus-on-aws-ec2-part1.md)**  
+**[2-Prometheus Node Exporter on AWS EC2](./prometheus-on-aws-ec2-part2.md)**  
+**[3-Prometheus Discovery Service on AWS EC2](./prometheus-on-aws-ec2-part3.md)**  
+**[4-Prometheus Alertmanager Sending Emails](./prometheus-on-aws-ec2-part4.md)**  
