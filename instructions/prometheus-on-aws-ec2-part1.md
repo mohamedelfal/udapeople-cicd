@@ -5,7 +5,7 @@
 
  
 
-# 1- Install Prometheus on AWS EC2
+# [1- Install Prometheus on AWS EC2](./prometheus-on-aws-ec2-part1.md)
 ![image](https://user-images.githubusercontent.com/100445644/168924721-28d192fb-0059-48b8-a0b5-73d4f3ab7b79.png)  
 Let’s face it, there will be something wrong at some point, and you need to know when it is happening.   
 That awesome application you have been working on for 6 months and you treat as your child is going to be in trouble someday.  
@@ -16,10 +16,10 @@ Prometheus is an awesome open-source tool for monitoring, designed for reliabili
 and meant to be the system you look for during an outage to allow you to quickly diagnose problems.
 
 The content is divided in the following topics:  
-**[1-Install Prometheus on AWS EC2](./instructions/prometheus-on-aws-ec2-part1.md)**  
-**[2-Prometheus Node Exporter on AWS EC2](./instructions/prometheus-on-aws-ec2-part2.md)**  
-**[3-Prometheus Discovery Service on AWS EC2](./instructions/prometheus-on-aws-ec2-part3.md)**  
-**[4-Prometheus Alertmanager Sending Emails](./instructions/prometheus-on-aws-ec2-part4.md)**  
+**[1-Install Prometheus on AWS EC2](./prometheus-on-aws-ec2-part1.md)**  
+**[2-Prometheus Node Exporter on AWS EC2](./prometheus-on-aws-ec2-part2.md)**  
+**[3-Prometheus Discovery Service on AWS EC2](./prometheus-on-aws-ec2-part3.md)**  
+**[4-Prometheus Alertmanager Sending Emails](./prometheus-on-aws-ec2-part4.md)**  
 
 **About AWS Free Tier**  
 AWS offers a Free Tier after creating an account and there are two main types of tiers I want to list:
