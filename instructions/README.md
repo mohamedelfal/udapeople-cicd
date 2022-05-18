@@ -12,7 +12,7 @@
   * [2-Prometheus Node Exporter on AWS EC2](#2-prometheus-node-exporter-on-aws-ec2)
   * [3-Prometheus Discovery Service on AWS EC2](#3-prometheus-discovery-service-on-aws-ec2)
   * [4-Prometheus Alertmanager Sending Emails](#4-prometheus-alertmanager-sending-emails)
-* [resource]()
+* [resources](#resources)
 ## OVERVIEW
 *Author: [prometheus.io](https://prometheus.io/)*  
 *[source url](https://prometheus.io/docs/introduction/overview/#features)*  
@@ -93,7 +93,8 @@ Prometheus values reliability. You can always view what statistics are available
 
 [![image](https://user-images.githubusercontent.com/100445644/168945248-d6902551-7e5b-40aa-a0a8-67307fb5830a.png)](./prometheus-on-aws-ec2-part4.md)
 
-## 
+## resources
 
-*[resource](https://prometheus.io/)*  
-*[Prometheus.io - Configuring Prometheus to Monitor Itself](https://prometheus.io/docs/prometheus/latest/getting_started/#configuring-prometheus-to-monitor-itself)*  
+*[prometheus website - prometheus.io](https://prometheus.io/)*  
+*[Configuring Prometheus to Monitor Itself - Prometheus.io](https://prometheus.io/docs/prometheus/latest/getting_started/#configuring-prometheus-to-monitor-itself)*  
+*[prometheus on aws ec2 - codewizardly.com](https://codewizardly.com/prometheus-on-aws-ec2-part1)*
