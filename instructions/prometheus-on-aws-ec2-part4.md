@@ -196,3 +196,11 @@ As always, remember that you need to use a different URL depending on your AWS E
 ![Alert Email](https://user-images.githubusercontent.com/100445644/168942573-d649d5ca-a9e0-4990-be0f-75af89afe5c8.png)
 
 
+
+## Index of Topics
+[<-- Previous topic ](./prometheus-on-aws-ec2-part3.md)  
+
+**[1-Install Prometheus on AWS EC2](./prometheus-on-aws-ec2-part1.md)**  
+**[2-Prometheus Node Exporter on AWS EC2](./prometheus-on-aws-ec2-part2.md)**  
+**[3-Prometheus Discovery Service on AWS EC2](./prometheus-on-aws-ec2-part3.md)**  
+**[4-Prometheus Alertmanager Sending Emails](./prometheus-on-aws-ec2-part4.md)** 
