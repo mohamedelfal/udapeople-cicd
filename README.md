@@ -1,9 +1,9 @@
 [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master)
 
 <h1 align="center">Udacity Advanced Cloud DevOps</h1>  
-
-<h2 align="center">Give Your Application Auto-Deploy Superpowers</h2>   
-<h4 align="center">Project №3: Udapeople <i>(Cloud-Based Software)</i></h4>  
+<h2 align="center">Build CI/CD Pipelines, Monitoring & Logging</h2>  
+<h3 align="center">Give Your Application Auto-Deploy Superpowers</h3>   
+<h4 align="center">UdaPeople<i>(Cloud-Based Software)</i></h4>  
     
 ## Table Of Contents
 * [Udapeople](#udapeople)
@@ -15,7 +15,7 @@
 * [Files Included](#files-included)
 * [License](#license)
 
-<h3 align="center">Udapeople</h3>   
+<h3 align="center">UdaPeople</h3>   
 
 <p align="center">
   <img width="" height="" src="./udapeople.png">
@@ -27,7 +27,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 </p>
 
 
-<h3 align="center">Udapeople Pipeline</h3>   
+<h3 align="center">UdaPeople Pipeline</h3>   
 
 <p align="center">
   <img width="" height="" src="./udapeople-pipeline.png"  
