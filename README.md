@@ -1,3 +1,5 @@
+# ***This Is `Instructions` and `Starter Code` For Udapeople Project***
+
 ## Give your Application Auto-Deploy Superpowers
 
 In this project, you will prove your mastery of the following learning objectives:
@@ -133,7 +135,7 @@ Before you submit your project, please check your work against the project rubri
   > choose one of these random strings :`tdppifd8` to crate `bucket`
  * from AWS `s3` > craete a bucket with this settings:
  * bucket name: `udapeople-tdppifd8`
- * unchec `[] block all public access`
+ * uncheck `[] block all public access`
  * check ` [x] I Knowledge that...`
  * >create
  * go to permissions tab>edit bucket policy> add this public access script :
