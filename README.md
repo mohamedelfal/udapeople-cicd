@@ -7,7 +7,10 @@ In this project, you will prove your mastery of the following learning objective
 - Utilize a configuration management tool to accomplish deployment to cloud-based servers.
 - Surface critical server errors for diagnosis using centralized structured logging.
 
-![Diagram of CI/CD Pipeline we will be building.](udapeople.png)
+![Diagram of CI/CD Pipeline we will be building.](udapeople.png)  
+
+## Udapeople Pipeline  
+![Udapeople Pipeline](udapeople-pipeline.png)  
 
 ### Instructions
 
@@ -54,6 +57,124 @@ Before you submit your project, please check your work against the project rubri
 - [Ansible](https://www.ansible.com/) - Configuration management tool
 - [Prometheus](https://prometheus.io/) - Monitoring tool
 
+## Get Start
+### Prerequisites
+* Git
+  >intialize Git Repo  
+  >Connect Local Git with remote GitHub  
+  >Copy starter files from starter code  
+  >create basic README.md  
+  >commit and push changes  
+  >create CircleCI project  
+* CircleCI
+  > We Will use convenience images provider by CircleCI  
+  > For all jobs dependant on Node we will use: cimg/node:13.8.0  
+  > We will use the built in caching to cache dependencies for faste execution time  
+* openSSH Clint
+  >openSSH is the premier connectivity tool for remote login with SSH protocol
+* Optional: 
+    * Node.js.13.8.0 and NPM6
+      >Node.js is a JavaScript runtime built on Chrome's v8 JavaScript engine 
+      * installation directly from Node.js installer . only one version per system
+    * Using NVM if using multiple node versions
+       >NPM is JavaScript Package Manger
+       * Using Node version manager. NVM allow you to quickly install and use different versions of node via the command line
+
+### Configuration Management Setup 
+### Getting Start With AWS
+* 1-from `EC2` Create and download a new `Key Pair` in AWS with this settings:
+  * Name: `udacity`
+  * key pair type: `RSA`
+  * Private key file format:`pem`
+   >Copy and Save `access ky id` and `secret access ky` at local file in your HD and download `SCV` File 
+
+* 2-From `IAM` Create `User` and copy the `accesee key id` and `Secreat Access key` with this settings:
+  * Name: `udapeople-circleci`
+  * select AWS credentail type: `Access key-Programmatic Access`
+  * set permissions > add user to group>attched policies: `AdminastorAccess`
+
+* 3-from `RDS` Create `PostgreSQL` database with this settings:
+  * RDS>Create Database>
+  * method: `standard create`
+  * engine option: `PostgresSQL`
+  * templates: `free tier`
+  * settings> DB instance identifier :`udapeople-db`
+  * settings> credantials setting> Master username:`PostgresSQL`
+  * check `auto gen a password`
+  * instance class : `db.t3.micro`
+  * uncheck [] enable storage autoscaling
+  * Connectivity > Public access : [`yes`]
+  * Connectivity > additional configuration> Database port: `5432`
+  * database authentication option: `password authentication`
+  * additional configuration >database option> intial database name: `glee`
+  * uncheck all other option check only `maintenance`
+  * > Craete
+  * save master `password` and `host` and `port` and check open port in inpond tab
+* 4- from `S3` create public s3 `bucket` 
+  > First, goto https://www.random.org/ website and start gen random strings you can get random strings like this:
+  ```
+  wqqrf71v
+  j9bm5gmd
+  0t3qo35c
+  zrq890yb
+  tdppifd8
+  8odcrlsw
+  rnfoquo0
+  gnx8p0io
+
+  ```
+  > choose one of these random strings :`tdppifd8` to crate `bucket`
+ * from AWS `s3` > craete a bucket with this settings:
+ * bucket name: `udapeople-tdppifd8`
+ * unchec `[] block all public access`
+ * check ` [x] I Knowledge that...`
+ * >create
+ * go to permissions tab>edit bucket policy> add this public access script :
+ ```script
+ {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicAccess",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::udapeople-tdppifd8/*"
+        }
+    ]
+
+ ```
+* 5-run in VSCode Git Bash terminal This Command:
+```bash
+cd .circleci/files \
+aws cloudformation deploy \
+    --template-file cloudfront.yml \
+    --stack-name InitialStack \
+    --parameter-overrides WorkfllowID=tdppifd8
+```
+### Getting Start With CircleCI
+1- add `ssh`key 
+ >goto `project settings` :
+ >`SSH Key`>`Add SSH Key`> :
+ >host name: `udapeopleKey`
+ >private key: open `udacity.pem` select all and copy all and paste and press `add ssh key`
+ >copy `fingerprint` and save it in your HD
+2- add the following environment variables to your CircleCI project by navigating to {project name}>settings>Environment Variables as shown here:
+```
+
+```
+* [Prometheus](./instructions/Prometheus/README.md#what-is-prometheus)  
+    * [OVERVIEW](./instructions/Prometheus/README.md#overview)  
+    * [What is Prometheus?](./instructions/Prometheus/README.md#what-is-prometheus)  
+    * [Features](./instructions/Prometheus/README.md#features)  
+    * [Components](./instructions/Prometheus/README.md#components)  
+    * [Architecture](./instructions/Prometheus/README.md#architecture)  
+    * [When does it fit?](./instructions/Prometheus/README.md#when-does-it-fit)  
+
+  * [1-Install Prometheus on AWS EC2](./instructions/Prometheus/1-install-prometheus-on-aws-ec2)   
+  * [2-Prometheus Node Exporter on AWS EC2](./instructions/Prometheus/2-prometheus-node-exporter-on-aws-ec2)   
+  * [3-Prometheus Discovery Service on AWS EC2](./instructions/Prometheus/3-prometheus-discovery-service-on-aws-ec2)   
+  * [4-Prometheus Alertmanager Sending Emails](./instructions/Prometheus/4-prometheus-alertmanager-sending-emails)   
 ### License
 
 [License](LICENSE.md)
