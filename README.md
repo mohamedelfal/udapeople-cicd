@@ -3,7 +3,7 @@
 <h1 align="center">Udacity Advanced Cloud DevOps</h1>  
 
 <h2 align="center">Give Your Application Auto-Deploy Superpowers</h2>   
-<h4 align="center">Project №3: Udapeople Cloud DevOps Project</h4>  
+<h4 align="center">Project №3: Udapeople <i>(Cloud-Based Software)</i></h4>  
     
 ## Table Of Contents
 * [Udapeople](#udapeople)
@@ -23,7 +23,7 @@
 <p align="center">
   A CI-CD pipeline for a client/server TypeScript project 
 hosted on AWS EC2 and CloudFront and monitored with Prometheus,<br>
-with Slack and E-mail notifications used for alerts.<br>"<i><small>the UdaPeople Application, a revolutionary concept in Human Resources which promises to help small businesses care better for their most valuable resource: their people."</small></i>
+with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional "UdaPeople" Product is  (Cloud-Based Software) Product,  a revolutionary concept in Human Resources which promises to help small businesses care better for their most valuable resource: their people."</i></small>
 </p>
 
 
