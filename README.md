@@ -59,27 +59,35 @@ Before you submit your project, please check your work against the project rubri
 
 ## Get Start
 ### Prerequisites
-* Git
+
+
+
+
+
+* [GitHub account](https://github.com/)
   >intialize Git Repo  
   >Connect Local Git with remote GitHub  
   >Copy starter files from starter code  
   >create basic README.md  
   >commit and push changes  
   >create CircleCI project  
-* CircleCI
+* [CircleCi account](https://circleci.com/)
   > We Will use convenience images provider by CircleCI  
   > For all jobs dependant on Node we will use: cimg/node:13.8.0  
   > We will use the built in caching to cache dependencies for faste execution time  
-* openSSH Clint
-  >openSSH is the premier connectivity tool for remote login with SSH protocol
+* [openSSH Client](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
+  >openSSH is the premier connectivity tool for remote login with SSH protocol  
+* [Docker](https://www.docker.com/)  
+* [AWS account](https://aws.amazon.com/)  
+* [kvdb api bucket](https://kvdb.io/)  
+* [Slack api App](https://api.slack.com/)  
 * Optional: 
-    * Node.js.13.8.0 and NPM6
+    * [Nodejs 13](https://nodejs.org/en/) Node.js.13.8.0 and NPM6
       >Node.js is a JavaScript runtime built on Chrome's v8 JavaScript engine 
       * installation directly from Node.js installer . only one version per system
     * Using NVM if using multiple node versions
        >NPM is JavaScript Package Manger
        * Using Node version manager. NVM allow you to quickly install and use different versions of node via the command line
-
 ### Configuration Management Setup 
 ### Getting Start With AWS
 * 1-from `EC2` Create and download a new `Key Pair` in AWS with this settings:
@@ -121,7 +129,6 @@ Before you submit your project, please check your work against the project rubri
   8odcrlsw
   rnfoquo0
   gnx8p0io
-
   ```
   > choose one of these random strings :`tdppifd8` to crate `bucket`
  * from AWS `s3` > craete a bucket with this settings:
@@ -153,16 +160,31 @@ aws cloudformation deploy \
     --parameter-overrides WorkfllowID=tdppifd8
 ```
 ### Getting Start With CircleCI
-1- add `ssh`key 
- >goto `project settings` :
- >`SSH Key`>`Add SSH Key`> :
- >host name: `udapeopleKey`
- >private key: open `udacity.pem` select all and copy all and paste and press `add ssh key`
- >copy `fingerprint` and save it in your HD
-2- add the following environment variables to your CircleCI project by navigating to {project name}>settings>Environment Variables as shown here:
-```
+first go to https://kvdb.io/ websit and make bucket  
+1- add `ssh`key  
+  >goto `project settings` : 
+  >`SSH Key`>`Add SSH Key`> :
+  >host name: `udapeopleKey`
+  >private key: open `udacity.pem` select all and copy all and paste and press `add ssh key`
+  >copy `fingerprint` and save it in your HD  
 
-```
+2- add the following environment variables to your CircleCI project by navigating to {project name}>settings>Environment Variables as shown here:  
+
+`AWS_ACCESS_KEY_ID`=(from IAM user with programmatic access)  
+`AWS_SECRET_ACCESS_KEY`=(from IAM user with programmatic access)  
+`AWS_DEFAULT_REGION`=`us-east-1` (your default region in aws)  
+`TYPEORM_CONNECTION`=`postgres`  
+`TYPEORM_MIGRATIONS_DIR`=`./src/migrations`  
+`TYPEORM_ENTITIES`=`./src/modules/domain/**/*.entity.ts`  
+`TYPEORM_MIGRATIONS`=`./src/migrations/*.ts`  
+`TYPEORM_HOST`={your postgres database hostname in RDS}  
+`TYPEORM_PORT`=`5432` (or the port from RDS if it’s different)  
+`TYPEORM_USERNAME`=`postgres`{your postgres database username in RDS}  
+`TYPEORM_PASSWORD`={your postgres database password in RDS}  
+`TYPEORM_DATABASE`=`postgres` {or your postgres database name in RDS}  
+`KVDB_BUCKET`=(your Bucket name in https://kvdb.io websit)  
+
+
 * [Prometheus](./instructions/Prometheus/README.md#what-is-prometheus)  
     * [OVERVIEW](./instructions/Prometheus/README.md#overview)  
     * [What is Prometheus?](./instructions/Prometheus/README.md#what-is-prometheus)  
