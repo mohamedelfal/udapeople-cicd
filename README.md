@@ -23,7 +23,7 @@
 <p align="center">
   A CI-CD pipeline for a client/server TypeScript project 
 hosted on AWS EC2 and CloudFront and monitored with Prometheus,<br>
-with Slack and E-mail notifications used for alerts. 
+with Slack and E-mail notifications used for alerts.<br>"<i><small>the UdaPeople Application, a revolutionary concept in Human Resources which promises to help small businesses care better for their most valuable resource: their people."</small></i>
 </p>
 
 
