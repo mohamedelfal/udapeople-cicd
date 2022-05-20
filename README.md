@@ -1,9 +1,10 @@
 [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master)
 
-# Udacity Advanced Cloud DevOps 
-# Give Your Application Auto-Deploy Superpowers
-Project *№3*: **Udapeople**   
-*Cloud DevOps Project*
+<h1 align="center">Udacity Advanced Cloud DevOps</h1>  
+
+<h2 align="center">Give Your Application Auto-Deploy Superpowers</h2>   
+<h4 align="center">Project №3: Udapeople Cloud DevOps Project</h4>  
+    
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
@@ -14,8 +15,23 @@ Project *№3*: **Udapeople**
 * [Files Included](#files-included)
 * [License](#license)
 
-# Udapeople 
-A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and CloudFront and monitored with Prometheus, with Slack and E-mail notifications used for alerts.
+<h3 align="center">Udapeople</h3>   
+
+<p align="center">
+  <img width="" height="" src="./udapeople.png">
+</p>
+<p align="center">
+  A CI-CD pipeline for a client/server TypeScript project 
+hosted on AWS EC2 and CloudFront and monitored with Prometheus,<br>
+with Slack and E-mail notifications used for alerts. 
+</p>
+
+
+<h3 align="center">Udapeople Pipeline</h3>   
+
+<p align="center">
+  <img width="" height="" src="./udapeople-pipeline.png"  
+</p>
 
 ## Prerequisites
 * [Nodejs 13](https://nodejs.org/en/)
@@ -35,15 +51,18 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 - [Ansible](https://www.ansible.com/) - Configuration management tool
 - [Prometheus](https://prometheus.io/) - Monitoring tool
 
-# Give Your Application Auto-Deploy Superpowers
-## Section 1: Selling CI/CD to your Team/Organization
+<h2 align="center">Project Submission</h2>  
+
+<h3 align="center">Section 1: Selling CI/CD to your Team/Organization</h3>  
+
 |CRITERIA|MEETS SPECIFICATIONS|Files|
 |:-----|:-----|:-----|
 |Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.|The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools. Explanation should include benefits that translate to revenue and cost for the business.|[presentation.pdf](./presentation.pdf)|
 
 
 
-## Section 2: Deploying Working, Trustworthy Software
+<h3 align="center">Section 2: Deploying Working, Trustworthy Software</h3>  
+
 |CRITERIA|MEETS SPECIFICATIONS|Files|
 |:-----|:-----|:-----|
 |Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.|A public git repository with your project code. |[URL01](https://github.com/mohamedelfal/udapeople-cicd/)<br>https://github.com/mohamedelfal/udapeople-cicd/|
@@ -65,7 +84,8 @@ A CI-CD pipeline for a client/server TypeScript project hosted on AWS EC2 and Cl
 ||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|
 ||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|
 
-## Section 3: Turn Errors into Sirens
+<h3 align="center">Section 3: Turn Errors into Sirens</h3>  
+
 |CRITERIA|MEETS SPECIFICATIONS|Files|
 |:-----|:-----|:-----|
 |Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|
