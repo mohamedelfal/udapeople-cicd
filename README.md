@@ -98,13 +98,14 @@ Before you submit your project, please check your work against the project rubri
   * Name: `udacity`
   * key pair type: `RSA`
   * Private key file format:`pem`
-   >Copy and Save `access ky id` and `secret access ky` at local file in your HD and download `SCV` File 
+   >download and Save `udacity.pem` file in your HD (*this is `SSH` Key*)
 
 * 2-From `IAM` Create `User` and copy the `accesee key id` and `Secreat Access key` with this settings:
   * Name: `udapeople-circleci`
   * select AWS credentail type: `Access key-Programmatic Access`
   * set permissions > add user to group>attched policies: `AdminastorAccess`
-
+   >Copy and Save `access ky id` and `secret access ky` at local file in your HD and download `SCV` File 
+   
 * 3-from `RDS` Create `PostgreSQL` database with this settings:
   * RDS>Create Database>
   * method: `standard create`
@@ -120,8 +121,8 @@ Before you submit your project, please check your work against the project rubri
   * database authentication option: `password authentication`
   * additional configuration >database option> intial database name: `glee`
   * uncheck all other option check only `maintenance`
-  * > Craete
-  * save master `password` and `host` and `port` and check open port in inpond tab
+  * >Craete
+  * save `master password` and `host` (*host is `Endpoint` url*) and `port` and must TCP port: `5432` is open for `0.0.0.0/0` ipv4 in `inbound` rules tab
 * 4- from `S3` create public s3 `bucket` 
   > First, goto https://www.random.org/ website and start gen random strings you can get random strings like this:
   ```
