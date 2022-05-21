@@ -7,6 +7,7 @@
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a>
  
 
+
 <!-- Adding Status Badges circleci Template
 # Template:
 [![<ORG_NAME>](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg)](<LINK>)
@@ -106,7 +107,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 ||Console output of a successful rollback after a failed smoke test. |[SCREENSHOT07](./screenshots/SCREENSHOT07.jpg)|[![SCREENSHOT07](https://img.shields.io/badge/SCREENSHOT07-EXISTS-brightgre)](./screenshots/SCREENSHOT07.jpg) <br>|
 ||Console output of successful promotion of new version to production in CloudFront. |[SCREENSHOT08](./screenshots/SCREENSHOT08.jpg)|[![SCREENSHOT08](https://img.shields.io/badge/SCREENSHOT08-EXISTS-brightgre)](./screenshots/SCREENSHOT08.jpg) <br>|
 ||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. |[SCREENSHOT09](./screenshots/SCREENSHOT09.jpg)|[![SCREENSHOT09](https://img.shields.io/badge/SCREENSHOT09-EXISTS-brightgre)](./screenshots/SCREENSHOT09.jpg) <br>|
-||Evidence that the deploy jobs only happen on the master branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|[![SCREENSHOT10](https://img.shields.io/badge/SCREENSHOT10-EXISTS-brightgre)](./screenshots/SCREENSHOT10.jpg) <br>|
+||Evidence that the deploy jobs only happen on the `master` branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|[![SCREENSHOT10](https://img.shields.io/badge/SCREENSHOT10-EXISTS-brightgre)](./screenshots/SCREENSHOT10.jpg) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=develop&filter=all)|
 ||Evidence of deployed and functioning front-end application in an S3 bucket .|[URL02]<br>[URL02_SCREENSHOT](./screenshots/URL02_SCREENSHOT.jpg)|[![URL02](https://img.shields.io/badge/URL02-EXISTS-brightgre)](./screenshots/screenshots/URL02_SCREENSHOT.jpg) <br>|
 ||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|[![URL03](https://img.shields.io/badge/URL03-EXISTS-brightgre)](./screenshots/screenshots/URL03_SCREENSHOT.jpg) <br>|
 ||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|[![URL04](https://img.shields.io/badge/URL04-EXISTS-brightgre)](./screenshots/URL04_SCREENSHOT.jpg) <br>|
