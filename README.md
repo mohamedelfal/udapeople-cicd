@@ -1,5 +1,5 @@
-[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop)
-
+<!--[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=svg)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop)-->
+[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=develop&filter=all)
 # Udacity Advanced Cloud DevOps 
 # Give Your Application Auto-Deploy Superpowers
 Project *№3*: **Udapeople**   
