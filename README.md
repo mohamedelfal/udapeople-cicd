@@ -2,11 +2,10 @@
 
 <h1 align="lift">Udacity Advanced Cloud DevOps</h1>  
 
-[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master.svg?style=shield)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/master)
+[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
 [![GitHub license](https://img.shields.io/badge/license-Udacity-blue.svg)](./LICENSE.md)
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a>
  
-    
 
 <!-- Adding Status Badges circleci Template
 # Template:
@@ -95,13 +94,13 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 |CRITERIA|MEETS SPECIFICATIONS |Files |Status|
 |:-----|:-----|:-----|:-----|
 |Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.|A public git repository with your project code. |[URL01](https://github.com/mohamedelfal/udapeople-cicd/)<br>https://github.com/mohamedelfal/udapeople-cicd/|[![url1](https://img.shields.io/badge/URL01-EXISTS-brightgre)](https://github.com/mohamedelfal/udapeople-cicd/) |
-||Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.|[config.yml](./.circleci/config.yml)|[![config.yml](https://img.shields.io/badge/config.yml-EXISTS-brightgre)](./.circleci/config.yml) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main.svg?style=shield)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main)  |
+||Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.|[config.yml](./.circleci/config.yml)|[![config.yml](https://img.shields.io/badge/config.yml-EXISTS-brightgre)](./.circleci/config.yml) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)  |
 ||***Console output of various pre-deploy job failure scenarios:***||
-||Build Jobs that failed because of compile errors. |[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|[![SCREENSHOT01](https://img.shields.io/badge/SCREENSHOT01-EXISTS-brightgre)](./screenshots/SCREENSHOT01.jpg) <br> |
+||Build Jobs that failed because of compile errors. |[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|[![SCREENSHOT01](https://img.shields.io/badge/SCREENSHOT01-EXISTS-brightgre)](./screenshots/SCREENSHOT01.jpg) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd/5/workflows/a7d18ce2-bcdd-465c-be52-5d7edb816b43/jobs/10/steps)|
 ||Failed unit tests. |[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)|[![SCREENSHOT02](https://img.shields.io/badge/SCREENSHOT02-EXISTS-brightgre)](./screenshots/SCREENSHOT02.jpg) <br> |
 ||Failure because of vulnerable packages. |[SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)|[![SCREENSHOT03](https://img.shields.io/badge/SCREENSHOT03-EXISTS-brightgre)](./screenshots/SCREENSHOT03.jpg) <br>|
 ||An alert from one of your failed builds. |[SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail Notification<br>[SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack Notification |[![SCREENSHOT04](https://img.shields.io/badge/E_mail_Alert-PASSED-brightgre)](./screenshots/SCREENSHOT04.png) <br> [![SCREENSHOT04](https://img.shields.io/badge/Slack_Alert-PASSED-brightgre)](./screenshots/SCREENSHOT04.jpg)|
-||***Evidence in your code that:*** Compile errors have been fixed.<br>Unit tests have been fixed.<br>All critical security vulnerabilities caught by the “Analyze” job have been fixed|[.circleci](./.circleci)<br>[backend](./backend)<br>[frontend](./frontend)|[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main.svg?style=shield)](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/main)|
+||***Evidence in your code that:*** Compile errors have been fixed.<br>Unit tests have been fixed.<br>All critical security vulnerabilities caught by the “Analyze” job have been fixed|[.circleci](./.circleci)<br>[backend](./backend)<br>[frontend](./frontend)|[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)|
 |Utilize a configuration management tool to accomplish deployment to cloud-based servers.|Console output of appropriate failure for infrastructure creation job (using CloudFormation). |[SCREENSHOT05](./screenshots/SCREENSHOT05.jpg)|[![SCREENSHOT05](https://img.shields.io/badge/SCREENSHOT05-EXISTS-brightgre)](./screenshots/SCREENSHOT05.jpg) <br>|
 ||Console output of a smoke test job that is failing appropriately. |[SCREENSHOT06](./screenshots/SCREENSHOT06.jpg)|[![SCREENSHOT06](https://img.shields.io/badge/SCREENSHOT06-EXISTS-brightgre)](./screenshots/SCREENSHOT06.jpg) <br>|
 ||Console output of a successful rollback after a failed smoke test. |[SCREENSHOT07](./screenshots/SCREENSHOT07.jpg)|[![SCREENSHOT07](https://img.shields.io/badge/SCREENSHOT07-EXISTS-brightgre)](./screenshots/SCREENSHOT07.jpg) <br>|
@@ -133,7 +132,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [LICENSE.md](./LICENSE.md)  
 
 ## License  
-[![GitHub license](https://img.shields.io/badge/license-Udacity-blue.svg)](./LICENSE.md)   <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+[![GitHub license](https://img.shields.io/badge/license-Udacity-blue.svg)](./LICENSE.md)   <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="center" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
 
 <!-- small <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. -->
 
