@@ -1,12 +1,6 @@
 
 
-<h1 align="lift">Udacity Advanced Cloud DevOps</h1>  
-
-[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
-[![GitHub license](https://img.shields.io/badge/license-Udacity-blue.svg)](./LICENSE.md)
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a>
- 
-
+<h1 align="center">Udacity Advanced Cloud DevOps<br></h1>  
 
 <!-- Adding Status Badges circleci Template
 # Template:
@@ -24,10 +18,15 @@
 Optional: an API token (to create badges for private projects)
 -->
 
-<h2 align="center">Build CI/CD Pipelines, Monitoring & Logging</h2>  
-<h3 align="center">Give Your Application Auto-Deploy Superpowers</h3>   
-<h4 align="center">UdaPeople<i>(Cloud-Based Software)</i></h4>  
-    
+<h3 align="center">Build CI/CD Pipelines, Monitoring & Logging<br>Give Your Application Auto-Deploy Superpowers<br>UdaPeople<i>(Cloud-Based Software)</h3>  
+  
+
+
+# 
+
+[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
+
+
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
@@ -133,8 +132,14 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [LICENSE.md](./LICENSE.md)  
 
 ## License  
-[![GitHub license](https://img.shields.io/badge/license-Udacity-blue.svg)](./LICENSE.md)   <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="center" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+
+<a rel="license" href="./LICENSE.md"><img alt="Udacity License"  src="https://img.shields.io/badge/license-Udacity-blue.svg" /></a>
 
 <!-- small <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. -->
 
+ # 
+<p align="center">
+ <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+ </p>
+ 
 <!--- big <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. -->
