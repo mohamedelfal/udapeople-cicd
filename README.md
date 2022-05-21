@@ -12,8 +12,8 @@ In this project, you will prove your mastery of the following learning objective
 ![Diagram of CI/CD Pipeline we will be building.](udapeople.png)  
 
 ## Udapeople Pipeline  
-![Udapeople Pipeline](udapeople-pipeline.png)  
-
+<!-- ![Udapeople Pipeline](udapeople-pipeline.png)  -->
+![Pipeline](pipeline.jpg)  
 ### Instructions
 
 * [Selling CI/CD](instructions/0-selling-cicd.md)
