@@ -18,7 +18,7 @@
 Optional: an API token (to create badges for private projects)
 -->
 
-<h3 align="center">Build CI/CD Pipelines, Monitoring & Logging<br>Give Your Application Auto-Deploy Superpowers<br>UdaPeople<i>(Cloud-Based Software)</h3>  
+<h3 align="center">Build CI/CD Pipelines, Monitoring & Logging<br>Give Your Application Auto-Deploy Superpowers<br>UdaPeople<i>(Cloud-Based Software)</i></h3>  
   
 
 
