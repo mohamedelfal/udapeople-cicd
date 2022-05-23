@@ -25,8 +25,8 @@ Optional: an API token (to create badges for private projects)
 # 
 
 [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
-
-
+![GitHub language count](https://img.shields.io/github/languages/count/mohamedelfal/udapeople-cicd)
+![GitHub top language](https://img.shields.io/github/languages/top/mohamedelfal/udapeople-cicd)
 ## Table Of Contents
 * [Udapeople](#udapeople)
 * [Prerequisites](#prerequisites)
@@ -97,41 +97,39 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 <h3 align="center">Section 1: Selling CI/CD to your Team/Organization</h3>  
 
 
-|CRITERIA|MEETS SPECIFICATIONS |Files |Status|
-|:-----|:-----|:-----|:-----|
-|Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.|The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools. Explanation should include benefits that translate to revenue and cost for the business.|[presentation.pdf](./presentation.pdf)|[![presentation.pdf1](https://img.shields.io/badge/PDF-EXISTS-brightgre)](./presentation.pdf)  |
-
+|CRITERIA|MEETS SPECIFICATIONS |Files |
+|:-----|:-----|:-----|
+|Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.|The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools. Explanation should include benefits that translate to revenue and cost for the business.|[presentation.pdf](./presentation.pdf)|
 
 <h3 align="center">Section 2: Deploying Working, Trustworthy Software</h3>  
 
 
-|CRITERIA|MEETS SPECIFICATIONS |Files |Status|
-|:-----|:-----|:-----|:-----|
+|CRITERIA|MEETS SPECIFICATIONS |Files |
+|:-----|:-----|:-----|
 |Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.|A public git repository with your project code. |[URL01](https://github.com/mohamedelfal/udapeople-cicd/)<br>https://github.com/mohamedelfal/udapeople-cicd/|[![url1](https://img.shields.io/badge/URL01-EXISTS-brightgre)](https://github.com/mohamedelfal/udapeople-cicd/) |
 ||Evidence of code-based CI/CD configuration in the form of yaml files in your git repository.|[config.yml](./.circleci/config.yml)|[![config.yml](https://img.shields.io/badge/config.yml-EXISTS-brightgre)](./.circleci/config.yml) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)  |
 ||***Console output of various pre-deploy job failure scenarios:***||
-||Build Jobs that failed because of compile errors. |[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|[![SCREENSHOT01](https://img.shields.io/badge/SCREENSHOT01-EXISTS-brightgre)](./screenshots/SCREENSHOT01.jpg) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd/5/workflows/a7d18ce2-bcdd-465c-be52-5d7edb816b43/jobs/10/steps)|
-||Failed unit tests. |[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)|[![SCREENSHOT02](https://img.shields.io/badge/SCREENSHOT02-EXISTS-brightgre)](./screenshots/SCREENSHOT02.jpg) <br> |
-||Failure because of vulnerable packages. |[SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)|[![SCREENSHOT03](https://img.shields.io/badge/SCREENSHOT03-EXISTS-brightgre)](./screenshots/SCREENSHOT03.jpg) <br>|
-||An alert from one of your failed builds. |[SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail Notification<br>[SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack Notification |[![SCREENSHOT04](https://img.shields.io/badge/E_mail_Alert-PASSED-brightgre)](./screenshots/SCREENSHOT04.png) <br> [![SCREENSHOT04](https://img.shields.io/badge/Slack_Alert-PASSED-brightgre)](./screenshots/SCREENSHOT04.jpg)|
-||***Evidence in your code that:*** Compile errors have been fixed.<br>Unit tests have been fixed.<br>All critical security vulnerabilities caught by the “Analyze” job have been fixed|[.circleci](./.circleci)<br>[backend](./backend)<br>[frontend](./frontend)|[![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)|
-|Utilize a configuration management tool to accomplish deployment to cloud-based servers.|Console output of appropriate failure for infrastructure creation job (using CloudFormation). |[SCREENSHOT05](./screenshots/SCREENSHOT05.jpg)|[![SCREENSHOT05](https://img.shields.io/badge/SCREENSHOT05-EXISTS-brightgre)](./screenshots/SCREENSHOT05.jpg) <br>|
-||Console output of a smoke test job that is failing appropriately. |[SCREENSHOT06](./screenshots/SCREENSHOT06.jpg)|[![SCREENSHOT06](https://img.shields.io/badge/SCREENSHOT06-EXISTS-brightgre)](./screenshots/SCREENSHOT06.jpg) <br>|
-||Console output of a successful rollback after a failed smoke test. |[SCREENSHOT07](./screenshots/SCREENSHOT07.jpg)|[![SCREENSHOT07](https://img.shields.io/badge/SCREENSHOT07-EXISTS-brightgre)](./screenshots/SCREENSHOT07.jpg) <br>|
-||Console output of successful promotion of new version to production in CloudFront. |[SCREENSHOT08](./screenshots/SCREENSHOT08.jpg)|[![SCREENSHOT08](https://img.shields.io/badge/SCREENSHOT08-EXISTS-brightgre)](./screenshots/SCREENSHOT08.jpg) <br>|
-||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. |[SCREENSHOT09](./screenshots/SCREENSHOT09.jpg)|[![SCREENSHOT09](https://img.shields.io/badge/SCREENSHOT09-EXISTS-brightgre)](./screenshots/SCREENSHOT09.jpg) <br>|
-||Evidence that the deploy jobs only happen on the `master` branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|[![SCREENSHOT10](https://img.shields.io/badge/SCREENSHOT10-EXISTS-brightgre)](./screenshots/SCREENSHOT10.jpg) <br> [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd/tree/develop.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=develop&filter=all)|
-||Evidence of deployed and functioning front-end application in an S3 bucket .|[URL02]<br>[URL02_SCREENSHOT](./screenshots/URL02_SCREENSHOT.jpg)|[![URL02](https://img.shields.io/badge/URL02-EXISTS-brightgre)](./screenshots/screenshots/URL02_SCREENSHOT.jpg) <br>|
-||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|[![URL03](https://img.shields.io/badge/URL03-EXISTS-brightgre)](./screenshots/screenshots/URL03_SCREENSHOT.jpg) <br>|
-||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|[![URL04](https://img.shields.io/badge/URL04-EXISTS-brightgre)](./screenshots/URL04_SCREENSHOT.jpg) <br>|
-
+||Build Jobs that failed because of compile errors. |[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)|
+||Failed unit tests. |[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)|
+||Failure because of vulnerable packages. |[SCREENSHOT03](./screenshots/SCREENSHOT03.jpg)|
+||An alert from one of your failed builds. |[SCREENSHOT04](./screenshots/SCREENSHOT04.png) e-mail Notification<br>[SCREENSHOT04](./screenshots/SCREENSHOT04.jpg) slack Notification |
+||***Evidence in your code that:*** Compile errors have been fixed.<br>Unit tests have been fixed.<br>All critical security vulnerabilities caught by the “Analyze” job have been fixed|[.circleci](./.circleci)<br>[backend](./backend)<br>[frontend](./frontend)|
+|Utilize a configuration management tool to accomplish deployment to cloud-based servers.|Console output of appropriate failure for infrastructure creation job (using CloudFormation). |[SCREENSHOT05](./screenshots/SCREENSHOT05.jpg)|
+||Console output of a smoke test job that is failing appropriately. |[SCREENSHOT06](./screenshots/SCREENSHOT06.jpg)|
+||Console output of a successful rollback after a failed smoke test. |[SCREENSHOT07](./screenshots/SCREENSHOT07.jpg)|
+||Console output of successful promotion of new version to production in CloudFront. |[SCREENSHOT08](./screenshots/SCREENSHOT08.jpg)|
+||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. |[SCREENSHOT09](./screenshots/SCREENSHOT09.jpg)|
+||Evidence that the deploy jobs only happen on the `master` branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|
+||Evidence of deployed and functioning front-end application in an S3 bucket .|[URL02]<br>[URL02_SCREENSHOT](./screenshots/URL02_SCREENSHOT.jpg)|
+||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|
+||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|
 <h3 align="center">Section 3: Turn Errors into Sirens</h3>  
 
-|CRITERIA|MEETS SPECIFICATIONS |Files |Status|
-|:-----|:-----|:-----|:-----|
-|Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|[![URL05](https://img.shields.io/badge/URL05-EXISTS-brightgre)](./screenshots/screenshots/URL05_SCREENSHOT.jpg) <br>|
-||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11](./screenshots/SCREENSHOT11.jpg)|[![SCREENSHOT11](https://img.shields.io/badge/SCREENSHOT11-EXISTS-brightgre)](./screenshots/SCREENSHOT11.jpg) <br>|
-||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. |[SCREENSHOT12](./screenshots/SCREENSHOT12.jpg)|[![SCREENSHOT12](https://img.shields.io/badge/SCREENSHOT12-EXISTS-brightgre)](./screenshots/SCREENSHOT12.jpg) <br>|
+|CRITERIA|MEETS SPECIFICATIONS |Files |
+|:-----|:-----|:-----|
+|Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|
+||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11](./screenshots/SCREENSHOT11.jpg)|
+||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. |[SCREENSHOT12](./screenshots/SCREENSHOT12.jpg)|
 
 ## Files Included
 * [.circleci](./.circleci)  
