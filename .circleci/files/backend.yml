@@ -1,5 +1,6 @@
 Description: >
   UdaPeople backend stack.
+
 Parameters:
   ID:
     Description: Unique identifier.
@@ -28,7 +29,7 @@ Resources:
       SecurityGroups:
         - Ref: InstanceSecurityGroup
       KeyName: udacity
-      ImageId: ami-0c4f7023847b90238 
+      ImageId: ami-0c4f7023847b90238
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
