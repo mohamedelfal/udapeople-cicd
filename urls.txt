@@ -4,7 +4,7 @@ URL01:https://github.com/mohamedelfal/udapeople-cicd
 
 2- URL02
 Evidence of deployed and functioning front-end application in an S3 bucket
-URL02:
+URL02:http://udapeople-7c09e3e.s3-website-us-east-1.amazonaws.com/
 
 3- URL03
 Evidence of deployed and functioning front-end application in CloudFront
