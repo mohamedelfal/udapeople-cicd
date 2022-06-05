@@ -1,18 +1,18 @@
  1- URL01 
 A public git repository with my project code 
-URL01:https://github.com/mohamedelfal/udapeople-cicd
+URL01:https://github.com/mohamedelfal/udapeople-cicd/
 
 2- URL02
 Evidence of deployed and functioning front-end application in an S3 bucket
-URL02:http://udapeople-7c09e3e.s3-website-us-east-1.amazonaws.com/
+URL02:http://udapeople-acd6aa1.s3-website-us-east-1.amazonaws.com/
 
 3- URL03
 Evidence of deployed and functioning front-end application in CloudFront
-URL03:
+URL03:http://d1d25b249roz2i.cloudfront.net/
 
 4- URL04
 Evidence of healthy back-end application
-URL04:
+URL04:http://54.242.194.18:3030/api/status/
 
 5- URL05
 Evidence of Prometheus Server
