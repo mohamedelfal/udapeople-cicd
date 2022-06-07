@@ -99,7 +99,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 
 |CRITERIA|MEETS SPECIFICATIONS |Files |
 |:-----|:-----|:-----|
-|Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.|The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools. Explanation should include benefits that translate to revenue and cost for the business.|[presentation.pdf](./presentation.pdf)|
+|Explain the fundamentals and benefits of CI/CD to achieve, build, and deploy automation for cloud-based software products.|The CI/CD benefits proposal contains essential benefits of CI/CD, and describes the business context that will benefit from the automation tools. Explanation should include benefits that translate to revenue and cost for the business.|[presentation.pdf](./Presentation.pdf)|
 
 <h3 align="center">Section 2: Deploying Working, Trustworthy Software</h3>  
 
