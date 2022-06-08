@@ -245,6 +245,7 @@ jobs:
           command: |
             cd frontend
             npm install
+            npm audit fix --audit-level=critical --force
       - run:
           name: Get backend url
           command: |
@@ -282,6 +283,7 @@ jobs:
           command: |
             cd backend
             npm install
+            npm audit fix --audit-level=critical --force
       - run:
           name: Package Backend
           command: |
