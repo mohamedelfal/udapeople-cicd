@@ -61,7 +61,7 @@ commands:
               npm install
               npm run migration:revert
             fi
-
+            
 jobs:
   build-frontend:
     docker:
@@ -90,9 +90,9 @@ jobs:
       - run:
           name: Back-end build
           command: |
-            cd backend
-            npm install
-            npm run build
+             cd backend
+             npm install 
+             npm run build
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
@@ -108,21 +108,23 @@ jobs:
           name: Front-end Unit Test
           command: |
             cd frontend
-            npm install
+            npm install 
             npm test
+                
   test-backend:
     docker:
       - image: cimg/node:13.8.0
     steps:
-      - checkout
-      - restore_cache:
-          keys: [backend-deps]
-      - run:
-          name: Back-end Unit Test
-          command: |
-            cd backend
-            npm install
-            npm test
+     - checkout
+     - restore_cache:
+        keys: [backend-deps]
+     - run:
+        name: Back-end Unit Test
+        command: |
+          cd backend
+          npm install 
+          npm test
+
   scan-frontend:
     docker:
       - image: cimg/node:13.8.0
@@ -131,12 +133,12 @@ jobs:
       - restore_cache:
           keys: [frontend-deps]
       - run:
-          name: Front-end Scan
-          command: |
-            cd frontend
-            npm install
-            npm audit fix --force --audit-level=critical
-            npm audit --audit-level=critical
+         name: Front-end Scan
+         command: |
+          cd frontend
+          npm install 
+          npm audit fix --force --audit-level=critical
+          npm audit --audit-level=critical
   scan-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -145,13 +147,13 @@ jobs:
       - restore_cache:
           keys: [backend-deps]
       - run:
-          name: Back-end Scan
-          command: |
-            cd backend
-            npm install
-            npm audit fix --force --audit-level=critical
-            npm audit fix --force --audit-level=critical
-            npm audit --audit-level=critical
+         name: Back-end Scan
+         command: |
+          cd backend
+          npm install 
+          npm audit fix --force --audit-level=critical
+          npm audit fix --force --audit-level=critical
+          npm audit --audit-level=critical
   deploy-infrastructure:
     docker:
       - image: cimg/base:stable
@@ -183,12 +185,13 @@ jobs:
               --output text)
             echo $BACKEND_PUBLIC_IP >> .circleci/ansible/inventory.txt
             cat .circleci/ansible/inventory.txt
+
       - persist_to_workspace:
           root: ~/
           paths:
-            - project/.circleci/ansible/inventory.txt
-      
-      - destroy-environment
+            - project/.circleci/ansible/inventory.txt   
+
+      - destroy-environment   
 
   configure-infrastructure:
     docker:
@@ -207,7 +210,7 @@ jobs:
             cd .circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt configure-server.yml
-      - destroy-environment
+      - destroy-environment      
 
   run-migrations:
     docker:
@@ -226,10 +229,10 @@ jobs:
           command: |
             if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
             then
-              curl https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
+              curl -d '1' https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7}
             fi
       - destroy-environment
-      - revert-migrations
+      - revert-migrations     
 
   deploy-frontend:
     docker:
@@ -261,8 +264,8 @@ jobs:
             npm run build
             aws s3 cp dist s3://udapeople-${CIRCLE_WORKFLOW_ID:0:7} --recursive
       - destroy-environment
-      - revert-migrations
-
+      - revert-migrations     
+                    
   deploy-backend:
     docker:
       - image: cimg/base:stable
@@ -300,7 +303,7 @@ jobs:
             cat inventory.txt
             ansible-playbook -i inventory.txt deploy-backend.yml
       - destroy-environment
-      - revert-migrations
+      - revert-migrations 
 
   smoke-test:
     docker:
@@ -334,7 +337,7 @@ jobs:
               exit 1
             fi
       - destroy-environment
-      - revert-migrations
+      - revert-migrations  
 
   cloudfront-update:
     docker:
@@ -359,7 +362,7 @@ jobs:
               --parameter-overrides WorkflowID="${CIRCLE_WORKFLOW_ID:0:7}" \
               --stack-name InitialStack
       - destroy-environment
-      - revert-migrations
+      - revert-migrations 
 
 #  cleanup:
 #    docker:
@@ -383,7 +386,7 @@ jobs:
 #              aws cloudformation delete-stack --stack-name "udapeople-backend-${OldWorkflowID}"
 #              aws cloudformation delete-stack --stack-name "udapeople-frontend-${OldWorkflowID}"
 #            fi
-
+            
 workflows:
   default:
     jobs:
@@ -416,4 +419,3 @@ workflows:
           requires: [smoke-test]
 #      - cleanup:
 #          requires: [cloudfront-update]
-
