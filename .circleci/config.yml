@@ -20,40 +20,20 @@ commands:
             sudo apt install software-properties-common
             sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible
-
-#  install_ansible:
-#    description: Install Ansible
-#    steps:
-#      - run:
-#          name: Install Ansible
-#          command: |
-#            sudo apt update
-#            sudo apt install software-properties-common -y
-#            sudo add-apt-repository --yes --update ppa:ansible/ansible
-#            sudo apt install ansible -y
-#  install_nodejs:
-#    description: Install Node.js 13
-#    steps:
-#      - run:
-#          name: Install Node.js 13
-#          command: |
-#            curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-#            sudo apt install -y nodejs
-
-#  destroy-environment:
-#    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
-#    parameters:
-#      Workflow_ID:
-#        type: string
-#        default: ${CIRCLE_WORKFLOW_ID:0:7}
-#    steps:
-#      - run:
-#          name: Destroy environments
-#          when: on_fail
-#          command: |
-#            aws cloudformation delete-stack --stack-name udapeople-backend-<< parameters.Workflow_ID >>
-#            aws s3 rm s3://udapeople-<<parameters.Workflow_ID>> --recursive
-#            aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
+  destroy-environment:
+    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
+    parameters:
+      Workflow_ID:
+        type: string
+        default: ${CIRCLE_WORKFLOW_ID:0:7}
+    steps:
+      - run:
+          name: Destroy environments
+          when: on_fail
+          command: |
+            aws cloudformation delete-stack --stack-name udapeople-backend-<< parameters.Workflow_ID >>
+            aws s3 rm s3://udapeople-<<parameters.Workflow_ID>> --recursive
+            aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
 
 #  revert-migrations:
 #    description: Revert the last migration
@@ -164,7 +144,6 @@ jobs:
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-
   deploy-infrastructure:
     docker:
       - image: cimg/base:stable
@@ -200,29 +179,27 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
+      
+      - destroy-environment
 
-#      
-#      - destroy-environment
-#
-#  configure-infrastructure:
-#    docker:
-#      - image: cimg/base:stable
-#    steps:
-#      - checkout
-#      - install_awscli
-#      - install_ansible
-#      - add_ssh_keys:
-#          fingerprints: ["29:85:78:05:67:d7:3c:7f:5c:34:e6:21:ca:e8:64:ff"]
-#      - attach_workspace:
-#          at: ~/
-#      - run:
-#          name: Configure Server
-#          command: |
-#            cd .circleci/ansible
-#            cat inventory.txt
-#            ansible-playbook -i inventory.txt configure-server.yml
-#      - destroy-environment
-#
+  configure-infrastructure:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - install_ansible
+      - add_ssh_keys:
+          fingerprints: ["29:85:78:05:67:d7:3c:7f:5c:34:e6:21:ca:e8:64:ff"]
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Configure Server
+          command: |
+            cd .circleci/ansible
+            cat inventory.txt
+            ansible-playbook -i inventory.txt configure-server.yml
+      - destroy-environment
+
 #  run-migrations:
 #    docker:
 #      - image: cimg/node:13.8.0
@@ -417,8 +394,8 @@ workflows:
           filters:
             branches:
               only: [master]
-#      - configure-infrastructure:
-#          requires: [deploy-infrastructure]
+      - configure-infrastructure:
+          requires: [deploy-infrastructure]
 #      - run-migrations:
 #          requires: [configure-infrastructure]
 #      - deploy-frontend:
