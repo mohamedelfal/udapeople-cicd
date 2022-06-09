@@ -78,6 +78,7 @@ jobs:
             cd frontend
             npm install
             npm run build
+            npm update
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
@@ -95,6 +96,7 @@ jobs:
             cd backend
             npm install
             npm run build
+            npm update
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
