@@ -31,21 +31,21 @@ commands:
 #            curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
 #            sudo apt install -y nodejs
 #
-#  destroy-environment:
-#    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
-#    parameters:
-#      Workflow_ID:
-#        type: string
-#        default: ${CIRCLE_WORKFLOW_ID:0:7}
-#    steps:
-#      - run:
-#          name: Destroy environments
-#          when: on_fail
-#          command: |
-#            aws cloudformation delete-stack --stack-name udapeople-backend-<< parameters.Workflow_ID >>
-#            aws s3 rm s3://udapeople-<<parameters.Workflow_ID>> --recursive
-#            aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
-#
+  destroy-environment:
+    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
+    parameters:
+      Workflow_ID:
+        type: string
+        default: ${CIRCLE_WORKFLOW_ID:0:7}
+    steps:
+      - run:
+          name: Destroy environments
+          when: on_fail
+          command: |
+            aws cloudformation delete-stack --stack-name udapeople-backend-<< parameters.Workflow_ID >>
+            aws s3 rm s3://udapeople-<<parameters.Workflow_ID>> --recursive
+            aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
+
 #  revert-migrations:
 #    description: Revert the last migration
 #    parameters:
@@ -201,28 +201,25 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
-      # Here's where you will add some code to rollback on 
+      - destroy-environment
 
-#      - destroy-environment
-#
-#  configure-infrastructure:
-#    docker:
-#      - image: cimg/base:stable
-#    steps:
-#      - checkout
-#      - install_awscli
-#      - install_ansible
-#      - add_ssh_keys:
-#          fingerprints: ["29:85:78:05:67:d7:3c:7f:5c:34:e6:21:ca:e8:64:ff"]
-#      - attach_workspace:
-#          at: ~/
-#      - run:
-#          name: Configure Server
-#          command: |
-#            cd .circleci/ansible
-#            cat inventory.txt
-#            ansible-playbook -i inventory.txt configure-server.yml
-#      - destroy-environment
+  configure-infrastructure:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - install_ansible
+      - add_ssh_keys:
+          fingerprints: ["d9:06:93:7c:dd:ac:25:bf:3d:f3:10:f5:5d:69:f6:67"]
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Configure Server
+          command: |
+            cd .circleci/ansible
+            cat inventory.txt
+            ansible-playbook -i inventory.txt configure-server.yml
+      - destroy-environment
 #
 #  run-migrations:
 #    docker:
@@ -288,7 +285,7 @@ jobs:
 #      - install_ansible
 #      - install_nodejs
 #      - add_ssh_keys:
-#          fingerprints: ["29:85:78:05:67:d7:3c:7f:5c:34:e6:21:ca:e8:64:ff"]
+#          fingerprints: ["d9:06:93:7c:dd:ac:25:bf:3d:f3:10:f5:5d:69:f6:67"]
 #      - attach_workspace:
 #          at: ~/
 #      - restore_cache:
@@ -418,8 +415,8 @@ workflows:
           filters:
             branches:
               only: [master]
-#      - configure-infrastructure:
-#          requires: [deploy-infrastructure]
+      - configure-infrastructure:
+          requires: [deploy-infrastructure]
 #      - run-migrations:
 #          requires: [configure-infrastructure]
 #      - deploy-frontend:
