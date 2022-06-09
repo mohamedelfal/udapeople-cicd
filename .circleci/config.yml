@@ -101,34 +101,34 @@ jobs:
           paths: [backend/node_modules]
           key: backend-deps
 
-#  test-frontend:
-#    docker:
-#      - image: cimg/node:13.8.0
-#    steps:
-#      - checkout
-#      - restore_cache:
-#          keys: [frontend-deps]
-#      - run:
-#          name: Front-end Unit Test
-#          command: |
-#            cd frontend
-#            npm install
-#            npm test
-#
-#  test-backend:
-#    docker:
-#      - image: cimg/node:13.8.0
-#    steps:
-#      - checkout
-#      - restore_cache:
-#          keys: [backend-deps]
-#      - run:
-#          name: Back-end Unit Test
-#          command: |
-#            cd backend
-#            npm install
-#            npm test
-#
+  test-frontend:
+    docker:
+      - image: cimg/node:13.8.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys: [frontend-deps]
+      - run:
+          name: Front-end Unit Test
+          command: |
+            cd frontend
+            npm install
+            npm test
+
+  test-backend:
+    docker:
+      - image: cimg/node:13.8.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys: [backend-deps]
+      - run:
+          name: Back-end Unit Test
+          command: |
+            cd backend
+            npm install
+            npm test
+
 #  scan-frontend:
 #    docker:
 #      - image: cimg/node:13.8.0
