@@ -77,8 +77,9 @@ jobs:
           command: |
             cd frontend
             npm install
-            npm audit fix
+            npm audit fix --force
             npm run build
+            npm update
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-deps
@@ -95,8 +96,9 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix
+            npm audit fix --force
             npm run build
+            npm update
       - save_cache:
           paths: [backend/node_modules]
           key: backend-deps
