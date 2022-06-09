@@ -76,7 +76,7 @@ jobs:
           name: Build front-end
           command: |
             cd frontend
-            npm install -g npm-check-updates
+            npm install
             npm run build
             npm update
             npm audit fix --audit-level=critical --force
@@ -95,7 +95,7 @@ jobs:
           name: Back-end build
           command: |
             cd backend
-            npm install -g npm-check-updates
+            npm install
             npm run build
             npm update
             npm audit fix --audit-level=critical --force
@@ -114,7 +114,7 @@ jobs:
           name: Front-end Unit Test
           command: |
             cd frontend
-            npm install -g npm-check-updates
+            npm install
             npm test
 
   test-backend:
@@ -128,7 +128,7 @@ jobs:
           name: Back-end Unit Test
           command: |
             cd backend
-            npm install -g npm-check-updates
+            npm install
             npm test
 
   scan-frontend:
@@ -142,7 +142,7 @@ jobs:
           name: Front-end Scan
           command: |
             cd frontend
-            npm install -g npm-check-updates
+            npm install
             npm audit fix --audit-level=critical --force
 #            npm audit fix --force --audit-level=critical
 #            npm audit --audit-level=critical
@@ -159,7 +159,7 @@ jobs:
           name: Back-end Scan
           command: |
             cd backend
-            npm install -g npm-check-updates
+            npm install
             npm audit fix --audit-level=critical --force
 #            npm audit fix --force --audit-level=critical
 #            npm audit fix --force --audit-level=critical
