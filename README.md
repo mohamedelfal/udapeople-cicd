@@ -128,7 +128,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 |CRITERIA|MEETS SPECIFICATIONS |Files |
 |:-----|:-----|:-----|
 |Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|
-||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11](./screenshots/SCREENSHOT11.jpg)|
+||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11 *CPU*](./screenshots/SCREENSHOT11_node_cpu_seconds_total.jpg)<br>[SCREENSHOT11 *Disk Usage*](./screenshots/SCREENSHOT11_node_filesystem_size_bytes.jpg)<br>[SCREENSHOT11 *Memory*](./screenshots/SCREENSHOT11_node_memory_MemFree_bytes.jpg)|
 ||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. |[SCREENSHOT12](./screenshots/SCREENSHOT12.jpg)|
 
 ## Files Included
@@ -138,7 +138,7 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 * [util](./util)  
 * [.gitignore](./.gitignore)  
 * [Screenshots](./screenshots/)  
-* [presentation.pdf](./presentation.pdf)  
+* [presentation.pdf](./Presentation.pdf)  
 * [urls.txt](./urls.txt)    
 * [README.md](./README.md)  
 * [LICENSE.md](./LICENSE.md)  
