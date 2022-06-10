@@ -121,14 +121,14 @@ with Slack and E-mail notifications used for alerts.<br>"<small><i>the fictional
 ||Console output of successful cleanup job that removes old S3 bucket and EC2 instance. |[SCREENSHOT09](./screenshots/SCREENSHOT09.jpg)|
 ||Evidence that the deploy jobs only happen on the `master` branch. |[SCREENSHOT10](./screenshots/SCREENSHOT10.jpg)|
 ||Evidence of deployed and functioning front-end application in an S3 bucket .|[URL02]<br>[URL02_SCREENSHOT](./screenshots/URL02_SCREENSHOT.jpg)|
-||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)|
+||Evidence of deployed and functioning front-end application in CloudFront. |[URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.jpg)<br>[URL03-2_SCREENSHOT](./screenshots/URL03_SCREENSHOT-2.jpg) |
 ||Evidence of healthy back-end application. |[URL02]<br>[URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.jpg)|
 <h3 align="center">Section 3: Turn Errors into Sirens</h3>  
 
 |CRITERIA|MEETS SPECIFICATIONS |Files |
 |:-----|:-----|:-----|
 |Surface critical server errors for diagnosis using centralized logging.|Evidence of Prometheus Server. |[URL05]<br>[URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.jpg)|
-||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11 *CPU*](./screenshots/SCREENSHOT11_node_cpu_seconds_total.jpg)<br>[SCREENSHOT11 *Disk Usage*](./screenshots/SCREENSHOT11_node_filesystem_size_bytes.jpg)<br>[SCREENSHOT11 *Memory*](./screenshots/SCREENSHOT11_node_memory_MemFree_bytes.jpg)|
+||Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. |[SCREENSHOT11 *CPU*](./screenshots/SCREENSHOT11_node_cpu_seconds_tota.jpg)<br>[SCREENSHOT11 *Disk Usage*](./screenshots/SCREENSHOT11_node_filesystem_size_bytes.jpg)<br>[SCREENSHOT11 *Memory*](./screenshots/SCREENSHOT11_node_memory_MemFree_bytes.jpg)|
 ||Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. |[SCREENSHOT12](./screenshots/SCREENSHOT12.jpg)|
 
 ## Files Included
