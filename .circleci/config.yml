@@ -145,7 +145,7 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt
 
-orkflows:
+workflows:
   default:
     jobs:
       - build-frontend
