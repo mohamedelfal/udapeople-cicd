@@ -4,16 +4,16 @@ URL01:https://github.com/mohamedelfal/udapeople-cicd/
 
 2- URL02
 Evidence of deployed and functioning front-end application in an S3 bucket
-URL02:http://udapeople-3ca05b5.s3-website-us-east-1.amazonaws.com/
+URL02:http://udapeople-f3f78a1.s3-website-us-east-1.amazonaws.com/
 
 3- URL03
 Evidence of deployed and functioning front-end application in CloudFront
-URL03:http://d1d25b249roz2i.cloudfront.net/
+URL03:http://d37jkqdfcaq9km.cloudfront.net/
 
 4- URL04
 Evidence of healthy back-end application
-URL04:http://184.73.76.124:3030/api/status/
+URL04:http://44.202.114.204:3030/api/status/
 
 5- URL05
 Evidence of Prometheus Server
-URL05:http://ec2-34-204-42-204.compute-1.amazonaws.com:9090/
+URL05:http://ec2-54-161-205-141.compute-1.amazonaws.com:9090/
