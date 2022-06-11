@@ -25,6 +25,7 @@ Optional: an API token (to create badges for private projects)
 # 
 
 [![CircleCI](https://circleci.com/gh/mohamedelfal/udapeople-cicd.svg?style=shield&circle-token=499c794914a6668bd794027edc74d9400d7a361f)](https://app.circleci.com/pipelines/github/mohamedelfal/udapeople-cicd?branch=master&filter=all)
+<a rel="Udacity" href="./screenshots/passed.md"><img alt="Udacity Project"  src="https://img.shields.io/badge/Udacity-PASSED-brightgre?style=plastic&logo=Udacity" /></a> <a rel="Udacity" href="./2-udacity-passed.jpg">
 [![GitHub language count](https://img.shields.io/github/languages/count/mohamedelfal/udapeople-cicd)](https://github.com/mohamedelfal/udapeople-cicd)
 [![GitHub top language](https://img.shields.io/github/languages/top/mohamedelfal/udapeople-cicd)](https://github.com/mohamedelfal/udapeople-cicd)
 ## Table Of Contents
