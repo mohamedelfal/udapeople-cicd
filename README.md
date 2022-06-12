@@ -92,21 +92,21 @@ Before you submit your project, please check your work against the project rubri
     * Using NVM if using multiple node versions
        >NPM is JavaScript Package Manger
        * Using Node version manager. NVM allow you to quickly install and use different versions of node via the command line
-### Configuration Management Setup 
-### Getting Start With AWS
-* 1-from `EC2` Create and download a new `Key Pair` in AWS with this settings:
+# Configuration Management Setup 
+## Getting Start With AWS
+### 1-from `EC2` Create and download a new `Key Pair` in AWS with this settings:
   * Name: `udacity`
   * key pair type: `RSA`
   * Private key file format:`pem`
    >download and Save `udacity.pem` file in your HD (*this is `SSH` Key*)
-
-* 2-From `IAM` Create `User` and copy the `accesee key id` and `Secreat Access key` with this settings:
+#
+### 2-From `IAM` Create `User` and copy the `accesee key id` and `Secreat Access key` with this settings:
   * Name: `udapeople-circleci`
   * select AWS credentail type: `Access key-Programmatic Access`
   * set permissions > add user to group>attched policies: `AdminastorAccess`
    >Copy and Save `access ky id` and `secret access ky` at local file in your HD and download `SCV` File 
-   
-* 3-from `RDS` Create `PostgreSQL` database with this settings:
+#   
+### 3-from `RDS` Create `PostgreSQL` database with this settings:
   * RDS>Create Database>
   * method: `standard create`
   * engine option: `PostgresSQL`
@@ -123,7 +123,8 @@ Before you submit your project, please check your work against the project rubri
   * uncheck all other option check only `maintenance`
   * >Craete
   * save `master password` and `host` (*host is `Endpoint` url*) and `port` and must TCP port: `5432` is open for `0.0.0.0/0` ipv4 in `inbound` rules tab
-* 4- from `S3` create public s3 `bucket` 
+#
+### 4- from `S3` create public s3 `bucket` 
   > First, goto https://www.random.org/ website and start gen random strings you can get random strings like this:
   ```
   wqqrf71v
@@ -156,39 +157,119 @@ Before you submit your project, please check your work against the project rubri
     ]
 
  ```
-* 5-run in VSCode Git Bash terminal This Command:
+ # Getting Start With VSCode Editor
+### Start New Git Bash terminal
+run This Command in VSCode Git Bash terminal:
 ```bash
 cd .circleci/files \
 aws cloudformation deploy \
     --template-file cloudfront.yml \
     --stack-name InitialStack \
-    --parameter-overrides WorkfllowID=tdppifd8
+    --parameter-overrides WorkfllowID=udapeople-tdppifd8
 ```
-### Getting Start With CircleCI
-first go to https://kvdb.io/ websit and make bucket  
-1- add `ssh`key  
+# Getting Start With CircleCI
+## 1- first go to https://kvdb.io/ websit and make bucket  
+## 2- add `ssh`key  
   >goto `project settings` : 
   >`SSH Key`>`Add SSH Key`> :
   >host name: `udapeopleKey`
   >private key: open `udacity.pem` select all and copy all and paste and press `add ssh key`
-  >copy `fingerprint` and save it in your HD  
+  >copy `fingerprint` and save it in your PC at  local HD  
 
-2- add the following environment variables to your CircleCI project by navigating to {project name}>settings>Environment Variables as shown here:  
+##  3- add the following environment variables to your CircleCI project by navigating to {project name}>settings>Environment Variables as shown here:  
 
-`AWS_ACCESS_KEY_ID`=(from IAM user with programmatic access)  
-`AWS_SECRET_ACCESS_KEY`=(from IAM user with programmatic access)  
-`AWS_DEFAULT_REGION`=`us-east-1` (your default region in aws)  
-`TYPEORM_CONNECTION`=`postgres`  
-`TYPEORM_MIGRATIONS_DIR`=`./src/migrations`  
-`TYPEORM_ENTITIES`=`./src/modules/domain/**/*.entity.ts`  
-`TYPEORM_MIGRATIONS`=`./src/migrations/*.ts`  
-`TYPEORM_HOST`={your postgres database hostname in RDS}  
-`TYPEORM_PORT`=`5432` (or the port from RDS if it’s different)  
-`TYPEORM_USERNAME`=`postgres`{your postgres database username in RDS}  
-`TYPEORM_PASSWORD`={your postgres database password in RDS}  
-`TYPEORM_DATABASE`=`postgres` {or your postgres database name in RDS}  
-`KVDB_BUCKET`=(your Bucket name in https://kvdb.io websit)  
+| KEY                    | VALUE                                    |
+| ---------------------- | ---------------------------------------- |
+| AWS_ACCESS_KEY_ID    | [(from IAM user with programmatic access)  ](#2-from-iam-create-user-and-copy-the-accesee-key-id-and-secreat-access-key-with-this-settings) |
+| AWS_SECRET_ACCESS_KEY | [(from IAM user with programmatic access)  ](#2-from-iam-create-user-and-copy-the-accesee-key-id-and-secreat-access-key-with-this-settings) |
+| AWS_DEFAULT_REGION      | `us-east-1`  (your default region in aws)  |
+| TYPEORM_CONNECTION     | `postgres`                                 |
+| TYPEORM_MIGRATIONS_DIR | `./src/migrations`                         |
+| TYPEORM_ENTITIES       | `./src/modules/domain/\*_/_.entity.ts`     |
+| TYPEORM_MIGRATIONS     | `./src/migrations/\*.ts`                   |
+| TYPEORM_HOST           | [(your postgres database hostname in RDS)](#3-from-rds-create-postgresql-database-with-this-settings)   |
+| TYPEORM_PORT           | [`5432`(or the port from RDS if it’s different)](#3-from-rds-create-postgresql-database-with-this-settings)   |
+| TYPEORM_USERNAME       | [(your postgres database username in RDS)](#3-from-rds-create-postgresql-database-with-this-settings) |
+| TYPEORM_PASSWORD       | [(your postgres database username in RDS)](#3-from-rds-create-postgresql-database-with-this-settings) |
+| TYPEORM_DATABASE       | `postgres` (or your postgres database name in RDS) |
+| KVDB_BUCKET          | [(your Bucket name in https://kvdb.io with out `https://kvdb.io/` section)](#4--from-s3-create-public-s3-bucket) |
 
+
+# Getting Start With Code
+
+**[SCREENSHOT01](./screenshots/SCREENSHOT01.jpg)**  
+1- build-backend Failed
+fix error in `main.ts` file goto this path:
+backend/src/main.ts
+goto line 31 
+```ts
+31    .addBearerAuth()x // here is an intentional compile error. Remove the "x" and the backend should compile.
+
+```
+Fix Backend compile error:
+in line 31 delete `x` line 
+update line 31 must be like this:
+```ts
+31    .addBearerAuth()
+
+```
+
+**[SCREENSHOT02](./screenshots/SCREENSHOT02.jpg)**  
+2- Test-frontend and backend Failed  
+* Test-frontend Failed   
+error in `LoadingMessage.spec.tsx` file  
+goto this path:
+frontend/src/app/components/LoadingMessage/LoadingMessage.spec.tsx
+goto line 11
+
+```tsx
+
+       9 |         const message = 'Hello!';
+      10 |         const wrapper = shallow(<LoadingMessage message={message} />);
+    > 11 |         expect(wrapper.contains(<span>{message}?</span>)).toBeTruthy(); //remove the question mark to make the test pass
+         |                                                ^
+      12 |       });
+      13 |     });
+      14 |   });
+``` 
+* Fix Frontend unit test
+goto line 11 remove the question mark `?`
+```tsx
+
+       9 |         const message = 'Hello!';
+      10 |         const wrapper = shallow(<LoadingMessage message={message} />);
+    > 11 |         expect(wrapper.contains(<span>{message}</span>)).toBeTruthy();
+         |                                                ^
+      12 |       });
+      13 |     });
+      14 |   });
+
+```
+* Test backend Failed 
+error in `employee-activator.handler.spec.ts` file
+ file path:
+ backend/src/modules/domain/employees/commands/handlers/employee-activator.handler.spec.ts
+ line 22
+```ts
+20
+21      const params = {
+22        employeeId: 101, //change this to 100 to make the test pass
+23        isActive: false,
+24      };
+25
+```
+* Fix backend unit test 
+    change this 101 to 100 
+```ts
+20
+21      const params = {
+22        employeeId: 100,
+23        isActive: false,
+24      };
+25
+```
+
+# 
 
 * [Prometheus](./instructions/Prometheus/README.md#what-is-prometheus)  
     * [OVERVIEW](./instructions/Prometheus/README.md#overview)  
